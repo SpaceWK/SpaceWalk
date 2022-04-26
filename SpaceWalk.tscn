@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://SkyBox/alpha mayoris.hdr" type="Texture" id=1]
+[ext_resource path="res://Luminaris0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fighter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Planets/Planet1/Planet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=5]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Fighter" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, -46.4353 )
+
+[node name="Luminaris0" parent="." instance=ExtResource( 2 )]
+max_speed = 10
+back_speed = -10
+
+[node name="Planet" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52726, -18.2457, -100.726 )
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.895875, 0.444307, 0, -0.444307, 0.895875, 0, 0.335012, -0.858445 )
+script = ExtResource( 5 )
+sensitivity_x = 500
+sensitivity_y = 500
+target = NodePath("../Luminaris0")
+
+[node name="Camera" type="Camera" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 0.970321, -0.24182, 0, 0.24182, 0.970321, 0, -0.932051, 1.75829 )
+fov = 68.7445
+
+[node name="Fighter2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.005, 0, -4.37114e-10, 0, 0.005, 0, 4.37114e-10, 0, -0.005, -0.000280276, -0.00422308, 0.187362 )
