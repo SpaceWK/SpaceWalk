@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://SkyBox/space_3_360.png" type="Texture" id=1]
 [ext_resource path="res://Luminaris0.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fighter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Planets/Planet1/Planet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=5]
-[ext_resource path="res://Meteors/Meteors.tscn" type="PackedScene" id=6]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 1 )
@@ -43,6 +42,3 @@ fov = 68.7445
 
 [node name="Fighter" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.005, 0, -4.37114e-10, 0, 0.005, 0, 4.37114e-10, 0, -0.005, -0.000280276, -0.00422308, 0.187362 )
-
-[node name="Meteors" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0843, 0, 0 )
