@@ -14,6 +14,7 @@ panorama = ExtResource( 1 )
 background_mode = 2
 background_sky = SubResource( 1 )
 background_energy = 2.95
+ambient_light_energy = 1.89
 
 [node name="Spatial" type="Spatial"]
 
@@ -21,7 +22,7 @@ background_energy = 2.95
 environment = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.152727, 0.988268, 0, -0.988268, 0.152727, 0, 134.442, 26.6384 )
+transform = Transform( 1, 0, 0, 0, 0.152727, 0.988268, 0, -0.988268, 0.152727, 0, 87.0437, 26.6384 )
 
 [node name="Luminaris0" parent="." instance=ExtResource( 2 )]
 max_speed = 10
@@ -45,4 +46,7 @@ fov = 68.7445
 transform = Transform( -0.005, 0, -4.37114e-10, 0, 0.005, 0, 4.37114e-10, 0, -0.005, -0.000280276, -0.00422308, 0.187362 )
 
 [node name="Meteors" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0843, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0843, 8.96512, 3.56441 )
+
+[node name="Meteors2" parent="." instance=ExtResource( 6 )]
+transform = Transform( -0.323653, 0, -0.946176, 0, 1, 0, 0.946176, 0, -0.323653, 57.7436, 2.14069, -41.7772 )

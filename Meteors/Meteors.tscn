@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Meteors/Asteroid_small/Asteroid_Small_4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Meteors/Asteroid_small/Asteroid_Small_6.tscn" type="PackedScene" id=2]
@@ -9,36 +9,70 @@
 [ext_resource path="res://Meteors/Asteroid_1/Asteroid_1_3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Meteors/Asteroid_2/Asteroid_2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Meteors/Asteroid_3/Asteroid_3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Meteors/Asteroid_1/Asteroid_1_4.tscn" type="PackedScene" id=10]
 
-[sub_resource type="SphereShape" id=1]
-radius = 0.001
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.001, 0.001, 0.001 )
 
 [node name="Meteors" type="KinematicBody"]
 script = ExtResource( 3 )
 
-[node name="Asteroid_2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33203, -3.51327, -6.56514 )
-
-[node name="Asteroid_3" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56756, -0.174681, -6.57529 )
-
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.82488 )
 shape = SubResource( 1 )
 
+[node name="Asteroid_2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.41246, -9.43351, -15.2258 )
+mode = 1
+
+[node name="Asteroid_3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72877, 2.10012, 4.28721 )
+mode = 1
+
 [node name="Asteroid_Small_6" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, -7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.376, 3.71314, -2.33868 )
+mode = 1
 
 [node name="Asteroid_Small_4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59286, -1.28395, -7.23211 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59487, 4.43338, -7.26979 )
+mode = 1
 
 [node name="Asteroid_4" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97373, -4.1357, -4.56587 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4126, -4.1357, -12.5017 )
+mode = 1
 
 [node name="Asteroid_1" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0963, -0.632794, -4.39064 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0762, -9.0199, -4.39064 )
+mode = 1
 
 [node name="Asteroid_5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.495066, 1.1846, -8.06348 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1777, 3.31504, 6.55486 )
+mode = 1
 
 [node name="Asteroid_6" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62222, -2.0508, -0.933788 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62222, 0.125657, -0.933788 )
+mode = 1
+
+[node name="Asteroid_1_4" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 12 )
+
+[node name="Asteroid_7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.85141, 1.29651, 11.7489 )
+
+[node name="Asteroid_8" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6643, 14.938, -14.774 )
+
+[node name="Asteroid_9" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.2392, 16.0238, 6.24804 )
+
+[node name="Asteroid_10" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0145, 2.86909, 1.85273 )
+
+[node name="Asteroid_11" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41706, -21.6121, -7.74609 )
+
+[node name="Asteroid_12" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, -0.000925024, 0, 1, 0, 0.000925024, 0, 1, 54.9427, 13.6035, -2.5346 )
+
+[node name="Asteroid_13" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83604, 15.6453, -16.63 )
