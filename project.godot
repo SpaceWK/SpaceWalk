@@ -39,8 +39,8 @@ _global_script_class_icons={
 [application]
 
 config/name="SpaceWalk"
-run/main_scene="res://SpaceWalk.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Godot/SpaceWalk.tscn"
+config/icon="res://Godot/icon.png"
 
 [input]
 
@@ -96,4 +96,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Godot/default_env.tres"

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Meteors/Asteroid_small/Asteroid_Small_4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Meteors/Asteroid_small/Asteroid_Small_6.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Meteors.gd" type="Script" id=3]
+[ext_resource path="res://Meteors/Meteors.gd" type="Script" id=3]
 [ext_resource path="res://Meteors/Asteroid_1/Asteroid_1_2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Meteors/Asteroid_4/Asteroid_4.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Meteors/Asteroid_1/Asteroid_1.tscn" type="PackedScene" id=6]
