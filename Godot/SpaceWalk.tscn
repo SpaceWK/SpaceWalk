@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://SkyBox/space_1_360.png" type="Texture" id=1]
+[ext_resource path="res://SkyBox/alpha mayoris.hdr" type="Texture" id=1]
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=2]
 [ext_resource path="res://Ships/Luminaris/Luminaris0.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Planets/Planet1/Planet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Meteors/Meteors.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ships/Fighter/Fighter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Visual PLanets/Earth/Earth.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Visual PLanets/Jupiter/Jupiter.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 1 )
@@ -23,13 +25,14 @@ environment = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.152727, 0.988268, 0, -0.988268, 0.152727, 0, 87.0437, 26.6384 )
+light_energy = 0.0
 
 [node name="Luminaris0" parent="." instance=ExtResource( 3 )]
 max_speed = 10
 back_speed = -10
 
 [node name="Planet" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52726, 6.41408, -116.695 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1741, 27.7317, -103.139 )
 
 [node name="Spatial" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.895875, 0.444307, 0, -0.444307, 0.895875, 0, 0.335012, -0.858445 )
@@ -51,5 +54,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0843, 8.96512, 3.56441 )
 [node name="Meteors2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.323653, 0, -0.946176, 0, 1, 0, 0.946176, 0, -0.323653, 57.7436, 2.14069, -41.7772 )
 
-[node name="Fighter2" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -58.1937 )
+[node name="Earth" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.8805, 43.1597, 20.6612 )
+
+[node name="Jupiter" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.0768, 15.2825, -70.8105 )

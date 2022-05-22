@@ -18,7 +18,7 @@ extents = Vector3( 0.001, 0.001, 0.001 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.82488 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0335984 )
 shape = SubResource( 1 )
 
 [node name="Asteroid_2" parent="." instance=ExtResource( 8 )]
