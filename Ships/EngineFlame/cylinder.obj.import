@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cylinder.obj-dd994497541621eb9e0e58fa62c09f5e.mesh"
+
+[deps]
+
+files=[ "res://.import/cylinder.obj-dd994497541621eb9e0e58fa62c09f5e.mesh" ]
+
+source_file="res://Ships/EngineFlame/cylinder.obj"
+dest_files=[ "res://.import/cylinder.obj-dd994497541621eb9e0e58fa62c09f5e.mesh", "res://.import/cylinder.obj-dd994497541621eb9e0e58fa62c09f5e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

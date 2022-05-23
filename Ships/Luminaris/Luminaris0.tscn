@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Ships/Luminaris/Luminaris0.glb" type="PackedScene" id=1]
 [ext_resource path="res://Ships/Luminaris/Luminaris0.gd" type="Script" id=2]
+[ext_resource path="res://Ships/EngineFlame/engine_flame.material" type="Material" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.231371, 0.141611, 0.415245 )
+
+[sub_resource type="CylinderMesh" id=2]
+material = ExtResource( 4 )
+top_radius = 3.074
+height = 2.575
 
 [node name="Luminaris0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -14,3 +20,13 @@ transform = Transform( -0.01, 0, -8.74228e-10, 0, 0.01, 0, 8.74228e-10, 0, -0.01
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 shape = SubResource( 1 )
+
+[node name="Fire1" type="MeshInstance" parent="." index="2"]
+transform = Transform( 0.05, 0, 0, 0, -8.74228e-09, -0.01, 0, 0.2, -4.37114e-10, 0.052, 0.0165978, 0.355 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Fire2" type="MeshInstance" parent="." index="3"]
+transform = Transform( 0.05, 0, 0, 0, -8.74228e-09, -0.01, 0, 0.2, -4.37114e-10, -0.06, 0.0146872, 0.358 )
+mesh = SubResource( 2 )
+material/0 = null
