@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Ships/SpeedDashes/beige_wall_001_rough_4k.jpg" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type particles;
+
+uniform float tunnel_radius : hint_range( 0.0, 10.0 ) = 2.0;
+uniform float tunnel_length : hint_range( 0.0, 100.0 ) = 50.0;
+
+float rand_from_seed(in uint seed) {
+	int k;
+	int s = int(seed);
+	if (s == 0)
+	s = 305420679;
+	k = s / 127773;
+	s = 16807 * (s - k * 127773) - 2836 * k;
+	if (s < 0)
+	s += 2147483647;
+	seed = uint(s);
+	return float(seed % uint(65536)) / 65535.0;
+}
+
+uint hash(uint x) {
+	x = ((x >> uint(16)) ^ x) * uint(73244475);
+	x = ((x >> uint(16)) ^ x) * uint(73244475);
+	x = (x >> uint(16)) ^ x;
+	return x;
+}
+
+void vertex() {
+
+	if (RESTART) {
+		uint alt_seed1 = hash(NUMBER + uint(1) + RANDOM_SEED);
+		// set particle position in model space with tunnel_radius and tunnel_length
+		float angle_rand = rand_from_seed( alt_seed1 ) * 6.283185;
+		TRANSFORM[3].x = tunnel_length;
+		TRANSFORM[3].y = sin( angle_rand ) * tunnel_radius;
+		TRANSFORM[3].z = cos( angle_rand ) * tunnel_radius;
+		// calculate VELOCITY in negative x direction
+		VELOCITY.x = -tunnel_length / LIFETIME;
+		// calculate 2D normal and send it to \"Pass 1\" shader with CUSTOM variable
+		CUSTOM.yz = vec2( sin( angle_rand - 1.570796 ), cos( angle_rand - 1.570796 ) );
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/tunnel_radius = 1.535
+shader_param/tunnel_length = 13.954
+
+[sub_resource type="Shader" id=3]
+code = "shader_type spatial;
+
+render_mode unshaded;
+uniform sampler2D texture_albedo : hint_albedo;
+
+void vertex() {
+	// caculate world_y: get local 2D normal from particle shader variable CUSTOM.yz and transform it from model space to world space
+	vec4 world_y = WORLD_MATRIX * vec4( 0.0, INSTANCE_CUSTOM.y, INSTANCE_CUSTOM.z, 0.0);
+	// calculate world_z by the cross product of WORLD_MATRIX[0] ( = world_x) and world_y
+	vec4 world_z = vec4( cross( WORLD_MATRIX[0].xyz, world_y.xyz ), 0.0 );
+	// calculate model space to view space
+	MODELVIEW_MATRIX = INV_CAMERA_MATRIX * mat4( WORLD_MATRIX[0], world_y, world_z, WORLD_MATRIX[3] );
+}
+
+void fragment() {
+	ALBEDO = texture( texture_albedo, UV ).rgb;
+	ALPHA = texture( texture_albedo, UV ).a;	
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/texture_albedo = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=5]
+material = SubResource( 4 )
+size = Vector2( 2, 0.1 )
+
+[node name="SpeedDashes" type="Particles"]
+cast_shadow = 0
+amount = 30
+preprocess = 2.0
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 5 )
