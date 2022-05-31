@@ -13,5 +13,5 @@ func _process(delta):
 	
 	velocity.x = direction.x * speed
 	# Moving the character
-	velocity = move_and_slide(velocity, Vector3.UP)
+	velocity = move_and_slide(velocity, Vector3(0,1,0))
 	self.rotate_y(self.rotation_speed * delta)

@@ -15,6 +15,8 @@ height = 2.575
 
 [node name="Luminaris0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+max_speed = 10
+back_speed = -10
 
 [node name="Luminaris OBJ" parent="." index="0"]
 transform = Transform( -0.005, 0, -7.54979e-10, 0, 0.005, 0, 7.54979e-10, 0, -0.005, 0, 0, 0 )
@@ -33,13 +35,14 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="AdvanceDashes" parent="." index="4" instance=ExtResource( 3 )]
-transform = Transform( -1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0, 0, 0.395 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 2.644 )
 speed_scale = 2.0
 explosiveness = 0.14
 randomness = 0.33
 
 [node name="RegressDashes" parent="." index="5" instance=ExtResource( 3 )]
-transform = Transform( 1.09278e-08, -9.55343e-16, 0.25, -2.18557e-08, -0.25, 0, 0.25, -2.18557e-08, -1.09278e-08, 0, 0, -0.397371 )
-speed_scale = 0.63
+transform = Transform( 8.74228e-08, -6.60025e-15, 1, -3.01992e-07, -1, -1.69407e-20, 2, -1.50996e-07, -4.37114e-08, 0, 0, -11.203 )
+lifetime = 0.7
+speed_scale = 0.4
 explosiveness = 0.1
 randomness = 0.08

@@ -53,4 +53,4 @@ mesh = ExtResource( 1 )
 material/0 = SubResource( 3 )
 
 [node name="EarthMoon" parent="MoonContainer" index="0" instance=ExtResource( 6 )]
-transform = Transform( 0.24, 0, 0, 0, 0.24, 0, 0, 0, 0.24, 0, 0, -1.66644 )
+transform = Transform( 0.24, 0, 0, 0, 0.24, 0, 0, 0, 0.24, 0, 0, -1.51041 )

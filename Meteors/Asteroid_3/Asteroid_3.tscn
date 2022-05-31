@@ -7,6 +7,9 @@ extents = Vector3( 2, 1, 2 )
 
 [node name="Asteroid_3" instance=ExtResource( 1 )]
 
+[node name="Asteroid_3_LOW_MODEL_" parent="." index="0"]
+transform = Transform( -0.00145874, -0.000478937, 0.199994, -0.000177902, 0.199999, 0.000477652, -0.199995, -0.000174413, -0.00145916, 0, 0, 0 )
+
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.114257, 0, 0 )
 shape = SubResource( 1 )

@@ -2,6 +2,7 @@ tool
 extends Spatial
 
 export(Resource) var planet_data setget set_planet_data
+export (float) var planet_rotation_speed = 1.0
 
 func set_planet_data(val):
 	planet_data = val
@@ -19,3 +20,5 @@ func on_data_changed():
 		var face := child as PlanetMeshFace
 		face.regenerate_mesh(planet_data)
 
+func _process(delta):
+	rotate_object_local(Vector3(0, 1, 0), planet_rotation_speed * delta)

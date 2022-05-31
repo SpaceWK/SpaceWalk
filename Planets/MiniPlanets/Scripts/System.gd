@@ -8,8 +8,6 @@ var orbits_speed = []
 func _ready():
 	randomize()
 	
-	#$Player.connect("stop_system", self, "on_stop_system")
-	
 	for i in orbits.get_child_count():
 		orbits_speed.push_back(rand_range(0.005, 0.01))
 		var orbit = orbits.get_child(i)

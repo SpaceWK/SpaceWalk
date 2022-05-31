@@ -8,8 +8,8 @@ extents = Vector3( 6.20164, 4.74533, 3.73963 )
 [node name="Asteroid_1_4" instance=ExtResource( 1 )]
 
 [node name="ASTEROID_LOW_POLY_1_" parent="." index="0"]
-transform = Transform( 1.85967, 0.270733, 0.684351, 0.685851, 0.0369496, -1.87836, -0.26691, 1.98125, -0.058484, 0, 0, 0 )
+transform = Transform( 0.464917, 0.0676831, 0.171088, 0.171463, 0.00923736, -0.46959, -0.0667275, 0.495312, -0.014621, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0538522, 0, 0 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0538522, 0, 0 )
 shape = SubResource( 1 )
