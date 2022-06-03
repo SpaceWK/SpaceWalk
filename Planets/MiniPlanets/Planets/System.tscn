@@ -16,9 +16,6 @@
 code = "shader_type spatial;
 render_mode depth_draw_always, cull_disabled, ambient_light_disabled;
 
-
-
-
 void vertex() {
 // Output:0
 
@@ -167,34 +164,34 @@ transform = Transform( 1.5, -1.68063e-07, 9.31323e-10, 1.00158e-07, 1.5, -8.7311
 transform = Transform( 1, -6.23713e-08, 3.49246e-10, -2.76668e-09, 1, 2.91038e-11, 0, 2.91038e-11, 1, 0.000941396, 0.000186987, 0.591034 )
 
 [node name="Planet" parent="Sun/Orbits/Orbit_6" instance=ExtResource( 5 )]
-transform = Transform( 1, -1.07075e-07, 5.82077e-10, 1.21345e-08, 0.999999, -2.03727e-10, 0, 1.45519e-10, 0.999999, -17.1369, -3.21238, 27.1904 )
+transform = Transform( -0.670125, -1.07076e-07, 0.744147, -1.87693e-08, 0.999999, 1.73782e-08, -0.744147, 8.73115e-11, -0.670125, -17.1369, -3.21238, 27.1904 )
 
 [node name="Meteors" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122521, 0.24006, 0.97076, -0.000373104, -2.93696e-05, 0.000391603, 1, -39.3824, -4.65815, -36.4602 )
+transform = Transform( 0.970759, -0.240058, 0.000122522, 0.24006, 0.970761, -0.000373104, -2.93691e-05, 0.000391604, 1, -3.77736, -5.6491, -130.921 )
 
 [node name="Meteors4" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.93703e-05, 0.000391603, 1, -50.0248, -3.33652, -13.8029 )
+transform = Transform( 0.970906, -0.23783, 0.027912, 0.239374, 0.960731, -0.140371, 0.00656867, 0.142967, 0.989706, -30.1692, -2.29467, -100.327 )
 
 [node name="Meteors5" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122524, 0.24006, 0.970761, -0.000373105, -2.93704e-05, 0.000391604, 1, -47.7768, -14.6549, -13.8029 )
+transform = Transform( 0.970759, -0.240058, 0.000122525, 0.24006, 0.970762, -0.000373105, -2.93704e-05, 0.000391604, 1, -16.5814, -11.0274, -54.891 )
 
 [node name="Meteors2" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122522, 0.24006, 0.97076, -0.000373104, -2.93703e-05, 0.000391603, 1, 59.7771, 15.0371, -36.6244 )
+transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.937e-05, 0.000391604, 1, 34.818, 4.28401, -122.793 )
 
 [node name="Meteors6" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.93702e-05, 0.000391603, 1, 58.1132, 23.576, -17.172 )
+transform = Transform( 0.970759, -0.240058, 0.000122524, 0.24006, 0.970762, -0.000373104, -2.937e-05, 0.000391603, 1, 33.4312, 2.05629, -55.5943 )
 
 [node name="Meteors7" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.93703e-05, 0.000391603, 1, 60.7673, 10.2134, -17.172 )
+transform = Transform( 0.970759, -0.240058, 0.000122524, 0.24006, 0.970762, -0.000373104, -2.93693e-05, 0.000391603, 1, 12.4446, -2.72319, -85.3594 )
 
 [node name="Meteors3" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122522, 0.24006, 0.970761, -0.000373104, -2.93703e-05, 0.000391603, 1, 51.3237, 13.358, 73.2165 )
+transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.93697e-05, 0.000391603, 1, -3.5211, -0.73608, 99.8687 )
 
 [node name="Meteors8" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.93702e-05, 0.000391603, 1, 49.6028, 21.862, 53.9686 )
+transform = Transform( 0.970759, -0.240058, 0.000122524, 0.24006, 0.970761, -0.000373104, -2.937e-05, 0.000391603, 1, -7.06963, 16.9694, 80.6208 )
 
 [node name="Meteors9" parent="Sun/Orbits" instance=ExtResource( 7 )]
-transform = Transform( 0.970759, -0.240058, 0.000122523, 0.24006, 0.970761, -0.000373104, -2.93703e-05, 0.000391603, 1, 54.213, -1.34914, 53.9686 )
+transform = Transform( 0.970759, -0.240058, 0.000122524, 0.24006, 0.970761, -0.000373104, -2.937e-05, 0.000391603, 1, -0.168555, -17.7756, 80.6208 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
@@ -202,14 +199,14 @@ volume_db = -10.797
 autoplay = true
 
 [node name="Black_Hole_Entry" type="CSGSphere" parent="."]
-transform = Transform( 50, 0, -4.76837e-07, 0, 50, 0, 4.76837e-07, 0, 50, -0.922497, 0, -6.02784 )
+transform = Transform( 50, 0, -1.43051e-06, 0, 50, 0, 1.43051e-06, 0, 50, -20.8523, 0, -136.255 )
 calculate_tangents = false
 radial_segments = 40
 rings = 30
 material = SubResource( 2 )
 
 [node name="Black_Hole_Exit" type="CSGSphere" parent="."]
-transform = Transform( 50, 0, -9.53674e-07, 0, 50, 0, 9.53674e-07, 0, 50, 44.8474, 0, 293.045 )
+transform = Transform( 50, 0, -1.90735e-06, 0, 50, 0, 1.90735e-06, 0, 50, 55.0699, 0, 359.842 )
 calculate_tangents = false
 radius = 0.5
 radial_segments = 30

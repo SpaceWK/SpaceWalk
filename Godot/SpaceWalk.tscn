@@ -18,7 +18,7 @@ tonemap_mode = 2
 tonemap_exposure = 2.09
 tonemap_white = 5.0
 
-[node name="Spatial" type="Spatial"]
+[node name="SpaceWalk" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
@@ -38,7 +38,7 @@ fov = 68.7445
 transform = Transform( -0.005, 0, -4.37114e-10, 0, 0.005, 0, 4.37114e-10, 0, -0.005, -0.000280276, 0.307048, 0.187362 )
 
 [node name="Luminaris0" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.784 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 198.442 )
 
 [node name="System" parent="." instance=ExtResource( 7 )]
 transform = Transform( -0.988491, 0, 0.151278, 0, 1, 0, -0.151278, 0, -0.988491, -2.13406, 0, 83.0186 )

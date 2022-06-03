@@ -212,7 +212,7 @@ surfaces/0 = {
 }
 
 [node name="Planet" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64641, 1.33901, -2.91435 )
+transform = Transform( -0.875869, 0, -0.482562, 0, 1, 0, 0.482562, 0, -0.875869, 1.64641, 1.33901, -2.91435 )
 script = ExtResource( 1 )
 planet_data = SubResource( 28 )
 

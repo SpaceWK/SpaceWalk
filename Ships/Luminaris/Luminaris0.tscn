@@ -6,7 +6,7 @@
 [ext_resource path="res://Ships/EngineFlame/engine_flame.material" type="Material" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.231371, 0.141611, 0.415245 )
+extents = Vector3( 0.136059, 0.0412311, 0.225056 )
 
 [sub_resource type="CylinderMesh" id=2]
 material = ExtResource( 4 )

@@ -8,10 +8,10 @@ var rotation_speed = 0.1
 
 func _process(delta):
 	var direction = Vector3.ZERO
-
+	
 	direction.x += 1
 	
 	velocity.x = direction.x * speed
 	# Moving the character
-	velocity = move_and_slide(velocity, Vector3(0,1,0))
+	velocity = move_and_slide(velocity)
 	self.rotate_y(self.rotation_speed * delta)

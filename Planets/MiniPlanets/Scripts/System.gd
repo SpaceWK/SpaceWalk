@@ -6,7 +6,7 @@ var orbits_speed = []
 	
 
 func _ready():
-	randomize()
+	#randomize()
 	
 	for i in orbits.get_child_count():
 		orbits_speed.push_back(rand_range(0.005, 0.01))

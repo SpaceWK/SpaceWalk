@@ -1,0 +1,147 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://SkyBox/hdr.png" type="Texture" id=1]
+[ext_resource path="res://Planets/Planet1/Planet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menu/Fonts/montreal/Montreal-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Menu/Fonts/droid-sans/DroidSans.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menu/Start_Menu/Ship.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Planets/MiniPlanets/Planets/Earth.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Planets/MiniPlanets/Planets/Saturnus.tscn" type="PackedScene" id=7]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 4 )
+
+[node name="Start_Menu" type="CanvasLayer"]
+
+[node name="Background" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.4562 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="Background/ViewportContainer"]
+size = Vector2( 1024, 600 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Background/ViewportContainer/Viewport"]
+transform = Transform( 0.476196, -0.830663, 0.288509, -0.626966, -0.09068, 0.773751, -0.616564, -0.549342, -0.563979, -6.66506, 35.363, -17.3884 )
+
+[node name="Camera" type="Camera" parent="Background/ViewportContainer/Viewport"]
+transform = Transform( -1, 0, -8.74228e-08, -2.99849e-08, 0.93934, 0.342988, 8.21197e-08, 0.342988, -0.93934, 0, 0.0131569, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Background/ViewportContainer/Viewport"]
+environment = SubResource( 2 )
+
+[node name="Planet" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 2 )]
+transform = Transform( 0.807854, 0, 0.592773, 0, 1, 0, -0.592773, 0, 0.807854, -4.59311, -6.03648, 20.4151 )
+
+[node name="Luminaris0" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199999, -0.73157 )
+
+[node name="Earth" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 6 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 27.5597, -20.9801, 76.2113 )
+
+[node name="Saturnus" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 7 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -31.2084, -8.86251, 36.5608 )
+
+[node name="Menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_top = 80
+custom_constants/margin_left = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+margin_left = 60.0
+margin_top = 80.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Title" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+margin_right = 294.0
+margin_bottom = 62.0
+size_flags_horizontal = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.596078, 0.803922, 0.8, 1 )
+text = "Space Walk"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 964.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 0, 75 )
+
+[node name="StartBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+margin_top = 145.0
+margin_right = 107.0
+margin_bottom = 204.0
+size_flags_horizontal = 0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Start"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+margin_top = 208.0
+margin_right = 964.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 0, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+margin_top = 242.0
+margin_right = 178.0
+margin_bottom = 301.0
+size_flags_horizontal = 0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Settings"
+
+[node name="MarginContainer3" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+margin_top = 305.0
+margin_right = 964.0
+margin_bottom = 335.0
+rect_min_size = Vector2( 0, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitBtn" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+margin_top = 339.0
+margin_right = 96.0
+margin_bottom = 398.0
+size_flags_horizontal = 0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Quit"
