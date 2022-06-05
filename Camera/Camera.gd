@@ -12,14 +12,19 @@ export var inverse_y = false
 export var sensitivity_x = 300
 export var sensitivity_y = 300
 
+export var mouse_sens = 0.1
+
 export (NodePath) var target
 onready var sprite = get_node(target)
+onready var camera = $Camera
 
 # // Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	enabled = true
 	inverse()
+	GlobalSettings.connect("fov_signal", self, "fov_updated")
+	GlobalSettings.connect("mouse_sens_signal", self, "mouse_sens_updated")
 
 # // Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -47,3 +52,9 @@ func _input(event):
 	if event is InputEventMouseMotion && enabled:
 		rotation.y += event.relative.x / -sensitivity_x
 		rotation.x += event.relative.y / -sensitivity_y
+
+func fov_updated(value):
+	camera.fov = value
+	
+func mouse_sens_updated(value):
+	mouse_sens = value

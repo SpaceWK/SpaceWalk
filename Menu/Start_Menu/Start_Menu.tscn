@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://SkyBox/hdr.png" type="Texture" id=1]
 [ext_resource path="res://Planets/Planet1/Planet.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Menu/Start_Menu/Ship.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Planets/MiniPlanets/Planets/Earth.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Planets/MiniPlanets/Planets/Saturnus.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Menu/Start_Menu/start_menu.gd" type="Script" id=8]
+[ext_resource path="res://Menu/Settings_Menu/fps.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Menu/Settings_Menu/Settings_Menu.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 1 )
@@ -26,6 +29,8 @@ size = 50
 font_data = ExtResource( 4 )
 
 [node name="Start_Menu" type="CanvasLayer"]
+script = ExtResource( 8 )
+level = "res://Godot/SpaceWalk.tscn"
 
 [node name="Background" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.4562 )
@@ -52,7 +57,7 @@ transform = Transform( -1, 0, -8.74228e-08, -2.99849e-08, 0.93934, 0.342988, 8.2
 environment = SubResource( 2 )
 
 [node name="Planet" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 2 )]
-transform = Transform( 0.454795, 0, 0.893221, 0, 1, 0, -0.893221, 0, 0.454795, -4.59311, -6.03648, 20.4151 )
+transform = Transform( 0.889317, 0, -0.474582, 0, 1, 0, 0.474582, 0, 0.889317, -4.59311, -6.03648, 20.4151 )
 
 [node name="Luminaris0" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199999, -0.73157 )
@@ -73,6 +78,8 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.33484
+margin_right = 1.33484
 custom_constants/margin_top = 80
 custom_constants/margin_left = 60
 __meta__ = {
@@ -145,3 +152,11 @@ size_flags_horizontal = 0
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
 text = "Quit"
+
+[node name="Label" parent="." instance=ExtResource( 9 )]
+
+[node name="Settings_Menu" parent="." instance=ExtResource( 10 )]
+
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/StartBtn" to="." method="_on_StartBtn_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/SettingsBtn" to="." method="_on_SettingsBtn_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]

@@ -39,8 +39,24 @@ _global_script_class_icons={
 [application]
 
 config/name="SpaceWalk"
-run/main_scene="res://Godot/SpaceWalk.tscn"
+run/main_scene="res://Menu/Start_Menu/Start_Menu.tscn"
 config/icon="res://Godot/icon.png"
+
+[autoload]
+
+Save="*res://Menu/save.gd"
+GlobalSettings="*res://Menu/Settings_Menu/global_settings.gd"
+Music="*res://Sounds/Music.tscn"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[global]
+
+stre=false
+stretch=false
 
 [input]
 
@@ -87,6 +103,11 @@ throttle_up={
 move_right={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pause={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
  ]
 }
 

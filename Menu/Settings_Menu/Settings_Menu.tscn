@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Menu/Settings_Menu/settings_menu.theme" type="Theme" id=1]
 [ext_resource path="res://Menu/Fonts/Lato_Regular/Lato-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Menu/Settings_Menu/Settings_Menu.gd" type="Script" id=3]
+[ext_resource path="res://Menu/Settings_Menu/settings_menu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -20,7 +20,6 @@ size = 25
 font_data = ExtResource( 2 )
 
 [node name="Settings_Menu" type="Popup"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -62,6 +61,8 @@ margin_bottom = -4.0
 [node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Video"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -31.0
 custom_constants/margin_right = 50
 custom_constants/margin_top = 50
 custom_constants/margin_left = 50
@@ -73,8 +74,8 @@ __meta__ = {
 [node name="VideoSettings" type="GridContainer" parent="SettingTabs/Video/MarginContainer"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 692.0
-margin_bottom = 403.0
+margin_right = 672.0
+margin_bottom = 372.0
 custom_constants/vseparation = 20
 columns = 2
 
@@ -85,8 +86,8 @@ custom_fonts/font = SubResource( 1 )
 text = "Display Mode"
 
 [node name="DisplayBtn" type="OptionButton" parent="SettingTabs/Video/MarginContainer/VideoSettings"]
-margin_left = 515.0
-margin_right = 642.0
+margin_left = 495.0
+margin_right = 622.0
 margin_bottom = 37.0
 size_flags_horizontal = 10
 custom_fonts/font = SubResource( 2 )
@@ -102,9 +103,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Vsync"
 
 [node name="VsyncBtn" type="CheckButton" parent="SettingTabs/Video/MarginContainer/VideoSettings"]
-margin_left = 578.0
+margin_left = 558.0
 margin_top = 57.0
-margin_right = 642.0
+margin_right = 622.0
 margin_bottom = 94.0
 size_flags_horizontal = 10
 
@@ -116,9 +117,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Display FPS"
 
 [node name="FPSBtn" type="CheckButton" parent="SettingTabs/Video/MarginContainer/VideoSettings"]
-margin_left = 578.0
+margin_left = 558.0
 margin_top = 114.0
-margin_right = 642.0
+margin_right = 622.0
 margin_bottom = 151.0
 size_flags_horizontal = 10
 
@@ -130,9 +131,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Max FPS"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SettingTabs/Video/MarginContainer/VideoSettings"]
-margin_left = 207.0
+margin_left = 187.0
 margin_top = 171.0
-margin_right = 642.0
+margin_right = 622.0
 margin_bottom = 208.0
 size_flags_horizontal = 10
 
@@ -143,7 +144,7 @@ margin_bottom = 28.0
 custom_fonts/font = SubResource( 3 )
 text = "Max"
 
-[node name="MaxFps" type="HSlider" parent="SettingTabs/Video/MarginContainer/VideoSettings/HBoxContainer"]
+[node name="MaxFpsBtn" type="HSlider" parent="SettingTabs/Video/MarginContainer/VideoSettings/HBoxContainer"]
 margin_left = 35.0
 margin_right = 435.0
 margin_bottom = 37.0
@@ -162,9 +163,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Bloom"
 
 [node name="BloomBtn" type="CheckButton" parent="SettingTabs/Video/MarginContainer/VideoSettings"]
-margin_left = 578.0
+margin_left = 558.0
 margin_top = 228.0
-margin_right = 642.0
+margin_right = 622.0
 margin_bottom = 265.0
 size_flags_horizontal = 10
 
@@ -176,9 +177,9 @@ custom_fonts/font = SubResource( 1 )
 text = "Brightness"
 
 [node name="BrightnessBtn" type="HSlider" parent="SettingTabs/Video/MarginContainer/VideoSettings"]
-margin_left = 242.0
+margin_left = 222.0
 margin_top = 285.0
-margin_right = 642.0
+margin_right = 622.0
 margin_bottom = 322.0
 rect_min_size = Vector2( 400, 0 )
 size_flags_horizontal = 10
@@ -360,3 +361,15 @@ min_value = 0.05
 max_value = 3.0
 step = 0.01
 value = 0.1
+
+[connection signal="item_selected" from="SettingTabs/Video/MarginContainer/VideoSettings/DisplayBtn" to="." method="_on_DisplayBtn_item_selected"]
+[connection signal="toggled" from="SettingTabs/Video/MarginContainer/VideoSettings/VsyncBtn" to="." method="_on_VsyncBtn_toggled"]
+[connection signal="toggled" from="SettingTabs/Video/MarginContainer/VideoSettings/FPSBtn" to="." method="_on_FPSBtn_toggled"]
+[connection signal="value_changed" from="SettingTabs/Video/MarginContainer/VideoSettings/HBoxContainer/MaxFpsBtn" to="." method="_on_MaxFpsBtn_value_changed"]
+[connection signal="toggled" from="SettingTabs/Video/MarginContainer/VideoSettings/BloomBtn" to="." method="_on_BloomBtn_toggled"]
+[connection signal="value_changed" from="SettingTabs/Video/MarginContainer/VideoSettings/BrightnessBtn" to="." method="_on_BrightnessBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Audio/MarginContainer/AudioSettings/MasterVolBtn" to="." method="_on_MasterVolBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Audio/MarginContainer/AudioSettings/MusicVolBtn" to="." method="_on_MusicVolBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Audio/MarginContainer/AudioSettings/SfxValBtn" to="." method="_on_SfxValBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer/FovBtn" to="." method="_on_FovBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer2/MouseSensBtn" to="." method="_on_MouseSensBtn_value_changed"]
