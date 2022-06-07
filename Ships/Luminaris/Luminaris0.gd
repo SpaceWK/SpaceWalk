@@ -1,15 +1,15 @@
 extends KinematicBody
 
-export var max_speed = 50
-export var back_speed = -50
+export var max_speed = 7
+export var back_speed = -7
 export var acceleration = 0.6
 export var pitch_speed = 1.5
 export var roll_speed = 1.9
-export var yaw_speed = 1.25  # Set lower for linked roll/yaw
+export var yaw_speed = 0.75  # Set lower for linked roll/yaw
 export var input_response = 8.0
 
 var velocity = Vector3.ZERO
-var forward_speed = 5
+var forward_speed = 3
 var pitch_input = 0
 var roll_input = 0
 var yaw_input = 0

@@ -2,7 +2,7 @@ extends Control
 
 var is_paused = false setget set_paused
 
-onready var settings_menu = $Settings_Menu
+onready var settings_menu = $SettingsMenu
 
 func _ready():
 	hide()
@@ -16,6 +16,7 @@ func set_paused(value):
 	
 
 func _unhandled_input(event):
+		
 	if event.is_action_pressed("pause"):
 		self.is_paused = !is_paused
 
@@ -30,3 +31,4 @@ func _on_SettingsBtn_pressed():
 
 func _on_QuitBtn_pressed():
 	get_tree().quit()
+
