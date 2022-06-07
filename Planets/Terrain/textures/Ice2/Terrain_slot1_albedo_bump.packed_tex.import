@@ -1,0 +1,18 @@
+[remap]
+
+importer="hterrain_packed_texture_importer"
+type="StreamTexture"
+path.s3tc="res://.import/Terrain_slot1_albedo_bump.packed_tex-632aba9f3122b7e2c2b5cca8a9451312.s3tc.stex"
+path.etc2="res://.import/Terrain_slot1_albedo_bump.packed_tex-632aba9f3122b7e2c2b5cca8a9451312.etc2.stex"
+
+[deps]
+
+source_file="res://Planets/Terrain/textures/Ice2/Terrain_slot1_albedo_bump.packed_tex"
+dest_files=[ "res://.import/Terrain_slot1_albedo_bump.packed_tex-632aba9f3122b7e2c2b5cca8a9451312.s3tc.stex", "res://.import/Terrain_slot1_albedo_bump.packed_tex-632aba9f3122b7e2c2b5cca8a9451312.etc2.stex" ]
+
+[params]
+
+compress/mode=2
+flags/repeat=1
+flags/filter=true
+flags/mipmaps=true

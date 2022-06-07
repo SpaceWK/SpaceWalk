@@ -58,7 +58,7 @@ transform = Transform( -1, 0, -8.74228e-08, -2.99849e-08, 0.93934, 0.342988, 8.2
 environment = SubResource( 2 )
 
 [node name="Planet" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 2 )]
-transform = Transform( -0.600893, 0, -0.810573, 0, 1, 0, 0.810573, 0, -0.600893, -4.59311, -6.03648, 20.4151 )
+transform = Transform( -0.688342, 0, -0.738073, 0, 1, 0, 0.738073, 0, -0.688342, -4.59311, -6.03648, 20.4151 )
 
 [node name="Luminaris0" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199999, -0.73157 )

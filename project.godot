@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "ResourceFormatLoader",
+"class": "HTerrainDataLoader",
+"language": "GDScript",
+"path": "res://addons/zylann.hterrain/hterrain_resource_loader.gd"
+}, {
+"base": "ResourceFormatSaver",
+"class": "HTerrainDataSaver",
+"language": "GDScript",
+"path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
+}, {
 "base": "Resource",
 "class": "PlanetBiome",
 "language": "GDScript",
@@ -30,6 +40,8 @@ _global_script_classes=[ {
 "path": "res://Planets/Planet1/PlanetNoise.gd"
 } ]
 _global_script_class_icons={
+"HTerrainDataLoader": "",
+"HTerrainDataSaver": "",
 "PlanetBiome": "",
 "PlanetData": "",
 "PlanetMeshFace": "",
@@ -39,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SpaceWalk"
-run/main_scene="res://Menu/Start_Menu/Start_Menu.tscn"
+run/main_scene="res://Menu/Intro/Intro.tscn"
 config/icon="res://Godot/icon.png"
 
 [autoload]
@@ -52,6 +64,10 @@ Music="*res://Sounds/Music.tscn"
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/zylann.hterrain/plugin.cfg" )
 
 [global]
 

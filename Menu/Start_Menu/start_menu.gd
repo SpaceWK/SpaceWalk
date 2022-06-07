@@ -7,7 +7,7 @@ onready var settings_menu = $Settings_Menu
 
 func _ready():
 	start.grab_focus()
-	
+
 
 func _on_StartBtn_pressed():
 	get_tree().change_scene(level)
