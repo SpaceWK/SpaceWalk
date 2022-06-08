@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://Planets/Terrain/Textures/Snow_field/snow_field_aerial_rough_4k.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://Planets/Terrain/Textures/Snow_field/snow_field_aerial_nor_gl_4k.jpg"
+	}
+}

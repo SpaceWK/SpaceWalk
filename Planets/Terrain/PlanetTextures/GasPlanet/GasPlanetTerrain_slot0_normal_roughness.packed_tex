@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://Planets/Terrain/Textures/Coast_land/coast_land_rocks_01_rough_4k.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://Planets/Terrain/Textures/Coast_land/coast_land_rocks_01_nor_gl_4k.jpg"
+	}
+}

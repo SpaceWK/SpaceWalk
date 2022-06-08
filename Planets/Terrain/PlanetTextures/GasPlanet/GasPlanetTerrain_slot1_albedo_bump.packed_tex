@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 1024,
+	"src": {
+		"a": "#ff888888",
+		"rgb": "res://Planets/Terrain/Textures/Snow_field/snow_field_aerial_col_4k.jpg"
+	}
+}
