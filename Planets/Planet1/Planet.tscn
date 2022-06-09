@@ -213,10 +213,10 @@ surfaces/0 = {
 }
 
 [sub_resource type="SphereShape" id=35]
-radius = 10.0
+radius = 7.0
 
 [node name="Planet" type="Spatial"]
-transform = Transform( 0.49895, 0, 0.867011, 0, 1, 0, -0.867011, 0, 0.49895, 1.64641, 1.33901, -2.91435 )
+transform = Transform( -0.910119, 0, 0.415739, 0, 1, 0, -0.415739, 0, -0.910119, 1.64641, 1.33901, -2.91435 )
 script = ExtResource( 1 )
 planet_data = SubResource( 28 )
 

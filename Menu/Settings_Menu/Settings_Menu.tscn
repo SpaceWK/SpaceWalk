@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Menu/Settings_Menu/settings_menu.theme" type="Theme" id=1]
 [ext_resource path="res://Menu/Fonts/Lato_Regular/Lato-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Menu/Settings_Menu/settings_menu.gd" type="Script" id=3]
+[ext_resource path="res://Menu/Settings_Menu/Settings_Menu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30

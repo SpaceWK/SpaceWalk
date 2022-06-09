@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Planets/Terrain/EarthPlanet/data.hterrain" type="Resource" id=1]
 [ext_resource path="res://Planets/Terrain/PlanetTextures/EarthPlanet/slot2_normal_roughness.packed_tex" type="Texture" id=2]
@@ -14,15 +14,19 @@
 [ext_resource path="res://addons/zylann.hterrain/tools/icons/icon_detail_layer_node.svg" type="Texture" id=12]
 [ext_resource path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" type="Script" id=13]
 [ext_resource path="res://Planets/Terrain/Textures/grass.png" type="Texture" id=14]
+[ext_resource path="res://Planets/Terrain/EarthPlanet/earth_skydome.png" type="Texture" id=15]
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="PanoramaSky" id=5]
+radiance_size = 1
+panorama = ExtResource( 15 )
 
 [sub_resource type="Environment" id=2]
 background_mode = 2
-background_sky = SubResource( 1 )
+background_sky = SubResource( 5 )
+background_sky_orientation = Basis( 1, 0, 0, -0.019, 0.578, 0, 0, 0, 1 )
 fog_enabled = true
 fog_depth_end = 247.1
-fog_depth_curve = 1.18921
+fog_depth_curve = 1.23114
 fog_height_enabled = true
 fog_height_min = 20.0
 fog_height_max = -20.0
@@ -134,6 +138,10 @@ void fragment() {
 }
 "
 
+[sub_resource type="CylinderShape" id=6]
+radius = 60.0
+height = 120.62
+
 [node name="Spatial" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -164,10 +172,19 @@ script = ExtResource( 13 )
 __meta__ = {
 "_editor_icon": ExtResource( 12 )
 }
+layer_index = 0
 texture = ExtResource( 14 )
 view_distance = 500.0
 custom_shader = SubResource( 4 )
+density = 4.0
+instance_mesh = null
 shader_params/u_globalmap_tint_bottom = 0.553
 shader_params/u_globalmap_tint_top = 0.391
 shader_params/u_bottom_ao = 0.351
 shader_params/u_instance_scale = Vector3( 1.5, 1.5, 1.5 )
+
+[node name="Boundary" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Boundary"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 50, 64 )
+shape = SubResource( 6 )

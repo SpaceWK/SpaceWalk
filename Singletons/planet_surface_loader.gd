@@ -11,4 +11,5 @@ func _ready():
 func load_surface(var planet_id : int):
 	loader.st
 
-func _load_surface(var surface_data)
+func _load_surface(var surface_data):
+	pass
