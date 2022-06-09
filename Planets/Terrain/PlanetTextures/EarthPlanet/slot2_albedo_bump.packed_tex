@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 1024,
+	"src": {
+		"a": "res://Planets/Terrain/Textures/Rock13/Rock013_2K_Displacement.jpg",
+		"rgb": "res://Planets/Terrain/Textures/Rock13/Rock013_2K_Color.jpg"
+	}
+}

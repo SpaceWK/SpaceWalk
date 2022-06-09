@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://Planets/Terrain/Textures/Coast_sand_grass/aerial_grass_rock_rough_4k.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://Planets/Terrain/Textures/Coast_sand_grass/aerial_grass_rock_nor_gl_4k.jpg"
+	}
+}

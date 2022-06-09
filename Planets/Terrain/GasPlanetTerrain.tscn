@@ -17,6 +17,17 @@
 [sub_resource type="Environment" id=2]
 background_mode = 2
 background_sky = SubResource( 1 )
+fog_enabled = true
+fog_sun_color = Color( 1, 0.901961, 0.701961, 1 )
+fog_depth_begin = 33.6
+fog_depth_end = 176.4
+fog_depth_curve = 0.435275
+fog_transmit_enabled = true
+fog_height_enabled = true
+fog_height_min = 12.0
+fog_height_max = -5.0
+fog_height_curve = 0.901251
+tonemap_mode = 3
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 11 )
