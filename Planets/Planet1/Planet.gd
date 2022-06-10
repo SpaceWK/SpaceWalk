@@ -3,6 +3,7 @@ extends Spatial
 
 export(Resource) var planet_data setget set_planet_data
 export (float) var planet_rotation_speed = 1.0
+export(bool) var rotate = true
 
 func set_planet_data(val):
 	planet_data = val
@@ -16,9 +17,10 @@ func _ready():
 func on_data_changed():
 	planet_data.min_height = 99999.0
 	planet_data.max_height = 0.0
-	for child in get_children():
-		var face := child as PlanetMeshFace
-		face.regenerate_mesh(planet_data)
+#	for child in get_children():
+#		var face := child as PlanetMeshFace
+#		face.regenerate_mesh(planet_data)
 
 func _process(delta):
-	rotate_object_local(Vector3(0, 1, 0), planet_rotation_speed * delta)
+	if rotate:
+		rotate_object_local(Vector3(0, 1, 0), planet_rotation_speed * delta)

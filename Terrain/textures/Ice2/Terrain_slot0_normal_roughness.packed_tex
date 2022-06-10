@@ -1,0 +1,8 @@
+{
+	"contains_albedo": false,
+	"resolution": 512,
+	"src": {
+		"a": "res://Planets/Terrain/textures/coast_sand_rocks_02_rough_4k.jpg",
+		"rgb": "res://Planets/Terrain/textures/coast_sand_rocks_02_nor_gl_4k.jpg"
+	}
+}

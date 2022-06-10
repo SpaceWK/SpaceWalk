@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot1_normal_roughness.packed_tex" type="Texture" id=1]
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot1_albedo_bump.packed_tex" type="Texture" id=2]
@@ -8,15 +8,19 @@
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot0_albedo_bump.packed_tex" type="Texture" id=6]
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot2_albedo_bump.packed_tex" type="Texture" id=7]
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot3_albedo_bump.packed_tex" type="Texture" id=8]
+[ext_resource path="res://Planets/Terrain/GasPlanet/gasplanet_skydome.jpg" type="Texture" id=9]
 [ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=11]
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=12]
 [ext_resource path="res://Planets/Terrain/GasPlanet/data.hterrain" type="Resource" id=13]
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="PanoramaSky" id=4]
+panorama = ExtResource( 9 )
 
 [sub_resource type="Environment" id=2]
 background_mode = 2
-background_sky = SubResource( 1 )
+background_sky = SubResource( 4 )
+background_sky_custom_fov = 76.4
+background_sky_orientation = Basis( 0.432, 0, 0, 0, 0.191, 0, 0, 0, 1 )
 fog_enabled = true
 fog_sun_color = Color( 1, 0.901961, 0.701961, 1 )
 fog_depth_begin = 33.6
