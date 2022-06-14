@@ -15,6 +15,7 @@ panorama = ExtResource( 1 )
 [sub_resource type="Environment" id=2]
 background_mode = 2
 background_sky = SubResource( 1 )
+background_color = Color( 0.25098, 0.0784314, 0.0784314, 1 )
 background_energy = 2.04
 ambient_light_energy = 1.89
 tonemap_mode = 2
@@ -44,10 +45,10 @@ fov = 68.7445
 transform = Transform( -0.005, 0, -4.37114e-10, 0, 0.005, 0, 4.37114e-10, 0, -0.005, -0.000280276, 0.307048, 0.187362 )
 
 [node name="Luminaris0" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 194.246 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.6261, 0, -390.51 )
 
 [node name="System" parent="." instance=ExtResource( 7 )]
-transform = Transform( -2.96547, 0, 0.453834, 0, 3, 0, -0.453834, 0, -2.96547, -2.13406, 0, 83.0186 )
+transform = Transform( -2.96547, 0, 0.453835, 0, 3, 0, -0.453835, 0, -2.96547, -2.32632, -5.36728, 57.12 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
 

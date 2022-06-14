@@ -3,11 +3,11 @@ extends Spatial
 onready var orbits = $Sun/Orbits
 
 var orbits_speed = []
-	
 
 func _ready():
 	#randomize()
-	
+	GlobalVars.system_scale = scale.x
+	GlobalVars.level_ref = self
 	for i in orbits.get_child_count():
 		orbits_speed.push_back(rand_range(0.005, 0.01))
 		var orbit = orbits.get_child(i)

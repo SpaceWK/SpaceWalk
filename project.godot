@@ -65,6 +65,8 @@ config/icon="res://Godot/icon.png"
 Save="*res://Menu/save.gd"
 GlobalSettings="*res://Menu/Settings_Menu/global_settings.gd"
 Music="*res://Sounds/Music.tscn"
+PlanetSurfaceLoader="*res://Singletons/planet_surface_loader.gd"
+GlobalVars="*res://Singletons/global_vars.gd"
 
 [display]
 

@@ -5,6 +5,8 @@ class_name PlanetData
 
 export var radius := 1.0 setget set_radius
 export var resolution := 10 setget set_resolution
+export(String, FILE, "*.tscn") var surface_data_path : String = ""
+export(Color) var fog_color
 export(Array, Resource) var planet_noise setget set_planet_noise
 export(Array, Resource) var biomes setget set_biomes
 export var biome_noise : OpenSimplexNoise = OpenSimplexNoise.new() setget set_biome_noise

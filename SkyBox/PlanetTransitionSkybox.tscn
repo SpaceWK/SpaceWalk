@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://SkyBox/PlanetTransitionSkybox.gd" type="Script" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+render_priority = 1
+flags_transparent = true
+flags_unshaded = true
+params_cull_mode = 1
+params_depth_draw_mode = 1
+albedo_color = Color( 1, 1, 1, 0 )
+
+[node name="PlanetTransitionSkybox" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00405174 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+script = ExtResource( 1 )
