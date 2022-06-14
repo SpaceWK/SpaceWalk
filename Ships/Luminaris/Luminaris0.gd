@@ -1,7 +1,7 @@
 extends KinematicBody
 
-export var max_speed = 7
-export var back_speed = -7
+export var max_speed = 21
+export var back_speed = -21
 export var acceleration = 0.6
 export var pitch_speed = 1.5
 export var roll_speed = 1.9
@@ -13,6 +13,9 @@ var forward_speed = 3
 var pitch_input = 0
 var roll_input = 0
 var yaw_input = 0
+
+func _ready():
+	GlobalVars.ship_ref = self
 
 func get_input(delta):
 	if Input.is_action_pressed("throttle_up"):
