@@ -1,8 +1,0 @@
-{
-	"contains_albedo": true,
-	"resolution": 512,
-	"src": {
-		"a": "res://Planets/Terrain/textures/Ice/Ice002_4K_Displacement.png",
-		"rgb": "res://Planets/Terrain/textures/Ice/Ice002_4K_Color.png"
-	}
-}

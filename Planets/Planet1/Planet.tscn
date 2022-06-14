@@ -216,12 +216,9 @@ surfaces/0 = {
 radius = 7.0
 
 [node name="Planet" type="Spatial"]
-transform = Transform( -0.910119, 0, 0.415739, 0, 1, 0, -0.415739, 0, -0.910119, 1.64641, 1.33901, -2.91435 )
+transform = Transform( -0.706879, 0, -0.719722, 0, 1, 0, 0.719722, 0, -0.706879, 1.64641, 1.33901, -2.91435 )
 script = ExtResource( 1 )
 planet_data = SubResource( 28 )
-
-[node name="LandingPoint" type="Spatial" parent="."]
-transform = Transform( -0.993868, 0, -0.11057, 0, 1, 0, 0.11057, 0, -0.993868, -2.38419e-07, 0, 5.22 )
 
 [node name="Up" type="MeshInstance" parent="."]
 material_override = ExtResource( 5 )
@@ -264,6 +261,9 @@ mesh = SubResource( 34 )
 material/0 = null
 script = ExtResource( 2 )
 normal = Vector3( 0, 0, -1 )
+
+[node name="LandingPoint" type="Spatial" parent="."]
+transform = Transform( -0.993868, 0, -0.11057, 0, 1, 0, 0.11057, 0, -0.993868, 0, 0, 5.22 )
 
 [node name="EntryField" type="Area" parent="."]
 script = ExtResource( 7 )

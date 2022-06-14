@@ -16,12 +16,12 @@ func regenerate_mesh(planet_data : PlanetData):
 	var resolution := planet_data.resolution
 	
 	var num_vertices : int = resolution * resolution
-	var num_indices : int = (resolution-1) * (resolution-1) * 6
+	var num_triangles : int = (resolution-1) * (resolution-1) * 6
 	
 	normal_array.resize(num_vertices)
 	uv_array.resize(num_vertices)
 	vertex_array.resize(num_vertices)
-	index_array.resize(num_indices)
+	index_array.resize(num_triangles)
 	
 	var tri_index : int = 0
 	var axisA := Vector3(normal.y, normal.z, normal.x)
