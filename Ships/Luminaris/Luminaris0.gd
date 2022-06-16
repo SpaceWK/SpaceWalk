@@ -14,6 +14,8 @@ var pitch_input = 0
 var roll_input = 0
 var yaw_input = 0
 
+onready var _audio = $ShipAudio
+
 func _ready():
 	GlobalVars.ship_ref = self
 

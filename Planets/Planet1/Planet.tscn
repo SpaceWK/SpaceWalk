@@ -221,7 +221,7 @@ radius = 12.0
 radius = 5.72128
 
 [node name="Planet" type="Spatial"]
-transform = Transform( 0.685831, 0, -0.727778, 0, 1, 0, 0.727778, 0, 0.685831, 0, 0, 0 )
+transform = Transform( 0.544034, 0, 0.839448, 0, 1, 0, -0.839448, 0, 0.544034, 0, 0, 0 )
 script = ExtResource( 1 )
 planet_data = SubResource( 28 )
 
