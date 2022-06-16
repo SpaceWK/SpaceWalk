@@ -4,7 +4,7 @@ signal loaded
 
 #This singleton launches a thread to load a planet's surface from a file.
 #When finished lading, the thread will close, add the current ship to the new surface scene, notify the rest of the game that it has finished loading, and pass a reference to the surface node
-
+#TODO: if time allows, use ResourceInteractiveLoader instead of `load()`
 var loader
 
 var system_loaded : bool = false #tracks if the planet system is loaded in.
@@ -17,7 +17,7 @@ func _ready():
 
 func load_surface(var planet_data : PlanetData): #(public) starts the loading thread
 	loader.start(self, "_load_surface", planet_data)
-	GlobalVars.planet_transition_skybox.transition(
+	GlobalVars.planet_transition_skybox.transition( #see SkyBox/PlanetTransitionSkybox.gd
 	GlobalVars.planet_ref,
 	GlobalVars.ship_ref.global_transform.origin.distance_to(GlobalVars.planet_ref.global_transform.origin),
 	planet_data.radius,

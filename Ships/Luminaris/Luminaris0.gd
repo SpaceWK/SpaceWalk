@@ -1,5 +1,7 @@
 extends KinematicBody
 
+signal space_state_changed
+
 export var max_speed = 21
 export var back_speed = -21
 export var acceleration = 0.6
@@ -8,10 +10,11 @@ export var roll_speed = 1.9
 export var yaw_speed = 0.75  # Set lower for linked roll/yaw
 export var input_response = 8.0
 
-var velocity = Vector3.ZERO
-var forward_speed = 3
-var pitch_input = 0
-var roll_input = 0
+var in_space : bool setget set_in_space#<-----------------------------------------------------
+var velocity = Vector3.ZERO	#					| this variable is used to signal whether or |
+var forward_speed = 3#							| not the landing detectors on the ship      |
+var pitch_input = 0#							| are activated.                             |
+var roll_input = 0#								----------------------------------------------
 var yaw_input = 0
 
 func _ready():
@@ -54,3 +57,8 @@ func _physics_process(delta):
 	transform.basis = transform.basis.orthonormalized()
 	velocity = -transform.basis.z * forward_speed
 	move_and_collide(velocity * delta)
+	
+func set_in_space(value): 						#--------------------------------------------------------------------
+	in_space = value							#|this is a setget for in_space. When set, this will fire a signal. |
+	emit_signal("space_state_changed", value)	#--------------------------------------------------------------------
+	

@@ -1,30 +1,34 @@
 extends MeshInstance
 
+#--------------------------------------------------------------------
+#| This script is for the "fog" sphere that encircles the ship when |
+#| entering another planet. The fog color is determined by each     |
+#| planet's PlanetData resource under `fog_color`.                  |
+#--------------------------------------------------------------------
 
-
-var obj : Node
-var distance : float
-var radius : float = 0
-var color : Color = Color.whitesmoke
+var obj : Node #reference to an object. It will probably be a planet, but eventually could include asteroids or space stations.
+var distance : float #distance from the planet where fog will start to appear
+var radius : float = 0 #radius of the object (subtracted from total distance when calculating fog transparency
+var color : Color = Color.whitesmoke #default fog color
+var transition_mode : bool #see `transition()` for explanation
 
 func _ready():
-	GlobalVars.planet_transition_skybox = self
+	GlobalVars.planet_transition_skybox = self #sets global pointer reference
 
 
-func transition(object : Node, dist : float, rad : float, col : Color):
-	obj = object
-	distance = dist
-	radius = rad
-	color = col
-	print(is_instance_valid(obj))
-	
+func transition(mode : bool, object : Node, dist : float, rad : float, col : Color):
+	transition_mode = mode
+	color = col#				-----------------------------------------------------------------
+	distance = dist#			| Sets variables for the fog transition. If mode is `true`,     |
+	radius = rad#				| the transition is for between space and the planet's surface. |
+	obj = object#				| `false` is the opposite (surface to space.) `obj` and         |
+#								| can be null in surface->space mode.                           |
+#								-----------------------------------------------------------------
+
 func _process(delta):
 	if !is_instance_valid(obj) or distance == null:
-		return
+		return #if `obj` or `distance` is not set, the calculations will abort.
 	else:
-#		print(GlobalVars.ship_ref.global_transform.origin)
-#		print(obj.global_transform.origin)
-		print(GlobalVars.ship_ref.global_transform.origin.distance_to(GlobalVars.planet_ref.global_transform.origin))
+		#the `ramp` calculation converts the distance of the ship between `distance` and the planet surface (distance - radius) into a value between 0 and 1
 		var ramp = clamp(((distance - radius) - GlobalVars.ship_ref.global_transform.origin.distance_to(obj.global_transform.origin)) / (distance - radius), 0, 1)
-		#print(ramp)
-		get_surface_material(0).albedo_color = Color(color.r, color.g, color.b, ramp)
+		get_surface_material(0).albedo_color = Color(color.r, color.g, color.b, ramp) #sets transparency using the ramp value
