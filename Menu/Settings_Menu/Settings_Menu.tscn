@@ -20,6 +20,7 @@ size = 25
 font_data = ExtResource( 2 )
 
 [node name="Settings_Menu" type="Popup"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -272,7 +273,7 @@ min_value = -50.0
 max_value = 0.0
 value = -10.0
 
-[node name="Gamelay" type="Tabs" parent="SettingTabs"]
+[node name="Gameplay" type="Tabs" parent="SettingTabs"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -281,7 +282,7 @@ margin_top = 43.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Gamelay"]
+[node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Gameplay"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 50
@@ -292,7 +293,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GameplaySettings" type="GridContainer" parent="SettingTabs/Gamelay/MarginContainer"]
+[node name="GameplaySettings" type="GridContainer" parent="SettingTabs/Gameplay/MarginContainer"]
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 695.0
@@ -300,26 +301,26 @@ margin_bottom = 403.0
 custom_constants/vseparation = 20
 columns = 2
 
-[node name="Fov" type="Label" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings"]
+[node name="Fov" type="Label" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings"]
 margin_right = 252.0
 margin_bottom = 37.0
 custom_fonts/font = SubResource( 1 )
 text = "FOV"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings"]
 margin_left = 256.0
 margin_right = 645.0
 margin_bottom = 37.0
 rect_min_size = Vector2( 350, 0 )
 
-[node name="FovVal" type="Label" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer"]
+[node name="FovVal" type="Label" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer"]
 margin_top = 3.0
 margin_right = 30.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 4 )
 text = "70"
 
-[node name="FovBtn" type="HSlider" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer"]
+[node name="FovBtn" type="HSlider" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer"]
 margin_left = 39.0
 margin_right = 389.0
 margin_bottom = 37.0
@@ -329,28 +330,28 @@ size_flags_vertical = 1
 min_value = 30.0
 value = 70.0
 
-[node name="MouseSens" type="Label" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings"]
+[node name="MouseSens" type="Label" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings"]
 margin_top = 57.0
 margin_right = 252.0
 margin_bottom = 94.0
 custom_fonts/font = SubResource( 1 )
 text = "Mouse Sensivity      "
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings"]
 margin_left = 256.0
 margin_top = 57.0
 margin_right = 645.0
 margin_bottom = 94.0
 alignment = 2
 
-[node name="SensVal" type="Label" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer2"]
+[node name="SensVal" type="Label" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer2"]
 margin_top = 3.0
 margin_right = 35.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 4 )
 text = "0.1"
 
-[node name="MouseSensBtn" type="HSlider" parent="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer2"]
+[node name="MouseSensBtn" type="HSlider" parent="SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer2"]
 margin_left = 39.0
 margin_right = 389.0
 margin_bottom = 37.0
@@ -371,5 +372,5 @@ value = 0.1
 [connection signal="value_changed" from="SettingTabs/Audio/MarginContainer/AudioSettings/MasterVolBtn" to="." method="_on_MasterVolBtn_value_changed"]
 [connection signal="value_changed" from="SettingTabs/Audio/MarginContainer/AudioSettings/MusicVolBtn" to="." method="_on_MusicVolBtn_value_changed"]
 [connection signal="value_changed" from="SettingTabs/Audio/MarginContainer/AudioSettings/SfxValBtn" to="." method="_on_SfxValBtn_value_changed"]
-[connection signal="value_changed" from="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer/FovBtn" to="." method="_on_FovBtn_value_changed"]
-[connection signal="value_changed" from="SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer2/MouseSensBtn" to="." method="_on_MouseSensBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer/FovBtn" to="." method="_on_FovBtn_value_changed"]
+[connection signal="value_changed" from="SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer2/MouseSensBtn" to="." method="_on_MouseSensBtn_value_changed"]

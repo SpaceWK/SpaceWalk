@@ -2,7 +2,7 @@ tool
 extends MeshInstance
 class_name PlanetMeshFace
 
-export var normal : Vector3
+export var side : Vector3
 
 func regenerate_mesh(planet_data : PlanetData):
 	var arrays := []
@@ -24,13 +24,13 @@ func regenerate_mesh(planet_data : PlanetData):
 	index_array.resize(num_triangles)
 	
 	var tri_index : int = 0
-	var axisA := Vector3(normal.y, normal.z, normal.x)
-	var axisB : Vector3 = normal.cross(axisA)
+	var axisA := Vector3(side.y, side.z, side.x)
+	var axisB : Vector3 = side.cross(axisA)
 	for y in range(resolution):
 		for x in range(resolution):
 			var i : int = x + y * resolution
 			var percent := Vector2(x,y) / (resolution-1)
-			var pointOnUnitCube : Vector3 = normal + (percent.x-0.5) * 2.0 * axisA + (percent.y-0.5) * 2.0 * axisB
+			var pointOnUnitCube : Vector3 = side + (percent.x-0.5) * 2.0 * axisA + (percent.y-0.5) * 2.0 * axisB
 			var pointOnUnitSphere := pointOnUnitCube.normalized()
 			var biome_index = planet_data.biome_percent_from_point(pointOnUnitSphere)
 			var pointOnPlanet := planet_data.point_on_planet(pointOnUnitSphere)

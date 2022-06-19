@@ -1,6 +1,5 @@
 extends KinematicBody
 
-
 export var speed = 0.1
 
 var velocity = Vector3.ZERO

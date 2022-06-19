@@ -63,6 +63,6 @@ func _input(event):
 
 func fov_updated(value):
 	camera.fov = value
-	
+
 func mouse_sens_updated(value):
 	mouse_sens = value

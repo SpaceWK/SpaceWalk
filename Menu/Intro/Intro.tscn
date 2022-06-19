@@ -48,6 +48,9 @@ margin_top = -67.3477
 margin_right = 1091.08
 margin_bottom = 643.652
 color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Fade In" = SubResource( 1 )
