@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Planets/MiniPlanets/Shaders/terrain.shader" type="Shader" id=1]
 [ext_resource path="res://Planets/MiniPlanets/Planets/Planet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Planets/MiniPlanets/Meshes/moon.mesh" type="ArrayMesh" id=3]
-[ext_resource path="res://Planets/EntryField.gd" type="Script" id=4]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -25,9 +24,6 @@ shader_param/max_val = 1.0
 shader_param/low_color = Color( 0.254902, 0.254902, 0.254902, 1 )
 shader_param/high_color = Color( 0.6, 0.6, 0.6, 1 )
 
-[sub_resource type="SphereShape" id=3]
-radius = 2.5
-
 [node name="EarthMoon" instance=ExtResource( 2 )]
 transform = Transform( 0.24, 0, 0, 0, 0.24, 0, 0, 0, 0.24, 0, 0, 0 )
 
@@ -40,9 +36,3 @@ shape = SubResource( 1 )
 [node name="MeshInstance" type="MeshInstance" parent="Mass" index="1"]
 mesh = ExtResource( 3 )
 material/0 = SubResource( 2 )
-
-[node name="EntryField" type="Area" parent="." index="2"]
-script = ExtResource( 4 )
-
-[node name="CollisionShape" type="CollisionShape" parent="EntryField" index="0"]
-shape = SubResource( 3 )

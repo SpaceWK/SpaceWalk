@@ -8,6 +8,7 @@ func _ready():
 	#randomize()
 	GlobalVars.system_scale = scale.x
 	GlobalVars.level_ref = self
+	GlobalVars.ship_ref.in_space = true
 	for i in orbits.get_child_count():
 		orbits_speed.push_back(rand_range(0.005, 0.01))
 		var orbit = orbits.get_child(i)

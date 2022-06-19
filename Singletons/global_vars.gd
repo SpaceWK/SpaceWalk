@@ -11,7 +11,6 @@ var ship_ref : Node
 var camera_ref : Node
 var ship_last_system_position : Transform
 var planet_transition_skybox : Node
-
 func set_level(path):
 	level = path
 	emit_signal("level_set")
