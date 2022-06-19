@@ -15,10 +15,10 @@ onready var musicVol = $SettingTabs/Audio/MarginContainer/AudioSettings/MusicVol
 onready var sfxVol = $SettingTabs/Audio/MarginContainer/AudioSettings/SfxValBtn
 
 # Gameplay Settings
-onready var fov = $SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer/FovBtn
-onready var fov_value = $SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer/FovVal
-onready var mouseSens = $SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer2/MouseSensBtn
-onready var mouseSens_value = $SettingTabs/Gamelay/MarginContainer/GameplaySettings/HBoxContainer2/SensVal
+onready var fov = $SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer/FovBtn
+onready var fov_value = $SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer/FovVal
+onready var mouseSens = $SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer2/MouseSensBtn
+onready var mouseSens_value = $SettingTabs/Gameplay/MarginContainer/GameplaySettings/HBoxContainer2/SensVal
 
 func _ready():
 	display.select(1 if Save.game_data.fullscreen_on else 0)
@@ -33,9 +33,8 @@ func _ready():
 	
 	fov.value = Save.game_data.fov
 	mouseSens.value = Save.game_data.mouse_sens
-
-
-
+	
+	
 func _on_DisplayBtn_item_selected(index):
 	GlobalSettings.toggle_fullscreen(true if index == 1 else false)
 
