@@ -16,7 +16,7 @@ func _ready():
 	GlobalVars.planet_transition_skybox = self #sets global pointer reference
 
 
-func transition(mode : bool, object : Node, dist : float, rad : float, col : Color):
+func transition(mode : bool, col : Color, dist : float, rad : float = 0.0, object : Node = null):
 	transition_mode = mode
 	color = col#				-----------------------------------------------------------------
 	distance = dist#			| Sets variables for the fog transition. If mode is `true`,     |
@@ -26,9 +26,16 @@ func transition(mode : bool, object : Node, dist : float, rad : float, col : Col
 #								-----------------------------------------------------------------
 
 func _process(delta):
-	if !is_instance_valid(obj) or distance == null:
-		return #if `obj` or `distance` is not set, the calculations will abort.
-	else:
-		#the `ramp` calculation converts the distance of the ship between `distance` and the planet surface (distance - radius) into a value between 0 and 1
-		var ramp = clamp(((distance - radius) - GlobalVars.ship_ref.global_transform.origin.distance_to(obj.global_transform.origin)) / (distance - radius), 0, 1)
-		get_surface_material(0).albedo_color = Color(color.r, color.g, color.b, ramp) #sets transparency using the ramp value
+	if distance != 0:
+		#the `ramp` calculations convert the distance of the ship between `distance` and the planet surface (distance - radius) into a value between 0 and 1
+		if transition_mode:
+			if !is_instance_valid(obj) or distance == null:
+				return #if `obj` or `distance` is not set, the calculations will abort.
+			var ramp = clamp(((distance - radius) - GlobalVars.ship_ref.global_transform.origin.distance_to(obj.global_transform.origin)) / (distance - radius), 0, 1)
+			get_surface_material(0).albedo_color = Color(color.r, color.g, color.b, ramp) #sets transparency using the ramp value
+		else:
+			var ramp = clamp((GlobalVars.ship_ref.global_transform.origin.y - distance) / distance, 0, 1)
+			get_surface_material(0).albedo_color = Color(color.r, color.g, color.b, ramp)
+			print(GlobalVars.ship_ref.global_transform.origin.y)
+			print(ramp)
+		

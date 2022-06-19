@@ -18,10 +18,11 @@ func _ready():
 func load_surface(var planet_data : PlanetData): #(public) starts the loading thread
 	loader.start(self, "_load_surface", planet_data)
 	GlobalVars.planet_transition_skybox.transition( #see SkyBox/PlanetTransitionSkybox.gd
-	GlobalVars.planet_ref,
+	true,
+	Color(planet_data.fog_color.r, planet_data.fog_color.g, planet_data.fog_color.b, 0.0),
 	GlobalVars.ship_ref.global_transform.origin.distance_to(GlobalVars.planet_ref.global_transform.origin),
 	planet_data.radius,
-	Color(planet_data.fog_color.r, planet_data.fog_color.g, planet_data.fog_color.b, 0.0)
+	GlobalVars.planet_ref
 	)
 
 func _load_surface(var planet_data : PlanetData): #(private) loads the surface in a parallel thread and sets the sky fog color for the current planet.
@@ -29,7 +30,7 @@ func _load_surface(var planet_data : PlanetData): #(private) loads the surface i
 	emit_signal("loaded", _loaded_resource)
 
 
-func go_to_surface(): #switches to the surface scene
+func go_to_surface(data : PlanetData): #switches to the surface scene
 	if is_instance_valid(_loaded_resource):
 		GlobalVars.level_ref.queue_free()
 		get_tree().get_root().add_child(_loaded_resource)
@@ -37,6 +38,11 @@ func go_to_surface(): #switches to the surface scene
 		GlobalVars.ship_ref.rotation.x = 180
 		GlobalVars.camera_ref.rotation.x += 180
 		GlobalVars.surface_ref = _loaded_resource
+		GlobalVars.planet_transition_skybox.transition( #see SkyBox/PlanetTransitionSkybox.gd
+		false,
+		Color(data.fog_color.r, data.fog_color.g, data.fog_color.b, 0.0),
+		GlobalVars.ship_ref.global_transform.origin.distance_to(GlobalVars.planet_ref.global_transform.origin)
+		)
 	
 		
 func leave_surface():

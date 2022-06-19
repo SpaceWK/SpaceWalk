@@ -17,6 +17,12 @@ var pitch_input = 0#							| are activated.                             |
 var roll_input = 0#								----------------------------------------------
 var yaw_input = 0
 
+onready var landing_points = $LandingPoints#	  -----------------------------------------------------------------
+onready var landing_detectors = $LandingDetectors#| Raycasts that try to detect the planet surface. LandingPoints |
+#												  | LandingPoints checks if all three corners of the ship are on  |
+#												  | the planet surface. LandingDetectors checks if the ship is in |
+#												  | range to land on the planet.                                  |
+#												  -----------------------------------------------------------------
 func _ready():
 	GlobalVars.ship_ref = self
 
@@ -50,6 +56,7 @@ func get_input(delta):
 
 
 func _physics_process(delta):
+	triangulate_normal($LandingPoints/FrontLandingPoint.global_transform.origin, $LandingPoints/LeftLandingPoint.global_transform.origin, $LandingPoints/RightLandingPoint.global_transform.origin)
 	get_input(delta)
 	transform.basis = transform.basis.rotated(transform.basis.z, roll_input * roll_speed * delta)
 	transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch_speed * delta)
@@ -61,4 +68,9 @@ func _physics_process(delta):
 func set_in_space(value): 						#--------------------------------------------------------------------
 	in_space = value							#|this is a setget for in_space. When set, this will fire a signal. |
 	emit_signal("space_state_changed", value)	#--------------------------------------------------------------------
+	
+func triangulate_normal(pa : Vector3, pb : Vector3, pc : Vector3):#this function calculates the orientation of the ship relative to the landing points
+	var a = pb - pa
+	var b = pc - pa
+	var normal = a * b
 	
