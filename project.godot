@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
 }, {
+"base": "Node",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://player/inventory.gd"
+}, {
 "base": "Resource",
 "class": "PlanetBiome",
 "language": "GDScript",
@@ -53,6 +58,7 @@ _global_script_class_icons={
 "EntryField": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
+"Inventory": "",
 "PlanetBiome": "",
 "PlanetData": "",
 "PlanetMeshFace": "",
@@ -73,7 +79,6 @@ GlobalSettings="*res://Menu/Settings_Menu/global_settings.gd"
 Music="*res://Sounds/Music.tscn"
 PlanetSurfaceLoader="*res://Singletons/planet_surface_loader.gd"
 GlobalVars="*res://Singletons/global_vars.gd"
-Inventory="res://player/inventory.gd"
 
 [display]
 

@@ -16,6 +16,7 @@ var forward_speed = 3#							| not the landing detectors on the ship      |
 var pitch_input = 0#							| are activated.                             |
 var roll_input = 0#								----------------------------------------------
 var yaw_input = 0
+var inventory = Inventory.new()
 
 onready var landing_points = $LandingPoints#	  -----------------------------------------------------------------
 onready var landing_detectors = $LandingDetectors#| Raycasts that try to detect the planet surface. LandingPoints |
