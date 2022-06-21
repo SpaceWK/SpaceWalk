@@ -9,5 +9,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	mineral_counter.text = "Minerals: %s/%s" % [str(GlobalVars.ship_ref.inventory.mineral_tank), str(GlobalVars.ship_ref.inventory.max_minerals)]

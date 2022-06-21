@@ -31,6 +31,7 @@ func _on_body_entered(body):
 
 func _on_planet_entered(body):
 	if body.is_in_group("ship"):
+		GlobalVars.ship_last_system_position = body.transform
 		PlanetSurfaceLoader.go_to_surface(planet_data)
 
 func _process(delta):
