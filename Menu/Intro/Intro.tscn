@@ -21,7 +21,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "Fade Out"
-length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1

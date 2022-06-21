@@ -35,8 +35,8 @@ func go_to_surface(data : PlanetData): #switches to the surface scene
 		GlobalVars.level_ref.queue_free()
 		get_tree().get_root().add_child(_loaded_resource)
 		GlobalVars.ship_ref.translation = Vector3(64, 120, -64)
-		GlobalVars.ship_ref.rotation.x = 180
-		GlobalVars.camera_ref.rotation.x += 180
+		#GlobalVars.ship_ref.rotation.x = 180
+		#GlobalVars.camera_ref.rotation.x += 180
 		GlobalVars.surface_ref = _loaded_resource
 		GlobalVars.planet_transition_skybox.transition( #see SkyBox/PlanetTransitionSkybox.gd
 		false,

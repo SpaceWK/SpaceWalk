@@ -23,11 +23,11 @@ background_sky = SubResource( 1 )
 size = 50
 font_data = ExtResource( 3 )
 
+[sub_resource type="StyleBoxEmpty" id=4]
+
 [sub_resource type="DynamicFont" id=5]
 size = 50
 font_data = ExtResource( 4 )
-
-[sub_resource type="StyleBoxEmpty" id=4]
 
 [node name="Start_Menu" type="CanvasLayer"]
 script = ExtResource( 8 )
@@ -58,7 +58,7 @@ transform = Transform( -1, 0, -8.74228e-08, -2.99849e-08, 0.93934, 0.342988, 8.2
 environment = SubResource( 2 )
 
 [node name="Planet" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 2 )]
-transform = Transform( 0.100513, 0, -1.00658, 0, 1, 0, 1.00658, 0, 0.100513, -4.59311, -6.03648, 20.4151 )
+transform = Transform( 0.0851479, 0, -1.01274, 0, 1, 0, 1.01274, 0, 0.0851479, -4.59311, -6.03648, 20.4151 )
 rotate = true
 
 [node name="Luminaris0" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 5 )]
@@ -93,11 +93,11 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="Title" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
-margin_right = 292.0
+margin_right = 294.0
 margin_bottom = 62.0
 size_flags_horizontal = 0
-custom_colors/font_color = Color( 0.596078, 0.803922, 0.8, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.596078, 0.803922, 0.8, 1 )
 text = "Space Walk"
 align = 1
 valign = 1
@@ -113,8 +113,8 @@ margin_top = 145.0
 margin_right = 107.0
 margin_bottom = 204.0
 size_flags_horizontal = 0
-custom_fonts/font = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Start"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
@@ -131,8 +131,8 @@ margin_top = 242.0
 margin_right = 178.0
 margin_bottom = 301.0
 size_flags_horizontal = 0
-custom_fonts/font = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Settings"
 
 [node name="MarginContainer3" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
@@ -149,8 +149,8 @@ margin_top = 339.0
 margin_right = 96.0
 margin_bottom = 398.0
 size_flags_horizontal = 0
-custom_fonts/font = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Quit"
 
 [node name="Label" parent="." instance=ExtResource( 9 )]

@@ -19,6 +19,8 @@ height = 2.575
 "ship",
 ] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+max_speed = 15
+back_speed = -15
 
 [node name="Luminaris OBJ" parent="." index="0"]
 transform = Transform( -0.005, 0, -7.54979e-10, 0, 0.005, 0, 7.54979e-10, 0, -0.005, 0, 0, 0 )

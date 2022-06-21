@@ -70,10 +70,10 @@ config/icon="res://Godot/icon.png"
 
 Save="*res://Menu/save.gd"
 GlobalSettings="*res://Menu/Settings_Menu/global_settings.gd"
-Music="res://Sounds/Music.tscn"
+Music="*res://Sounds/Music.tscn"
 PlanetSurfaceLoader="*res://Singletons/planet_surface_loader.gd"
 GlobalVars="*res://Singletons/global_vars.gd"
-Inventory="*res://player/inventory.gd"
+Inventory="res://player/inventory.gd"
 
 [display]
 
@@ -88,6 +88,19 @@ enabled=PoolStringArray( "res://addons/zylann.hterrain/plugin.cfg" )
 
 stre=false
 stretch=false
+
+[gui]
+
+theme/custom_font="res://Menu/Fonts/montreal/Montreal.tres"
+
+[importer_defaults]
+
+wavefront_obj={
+"generate_tangents": true,
+"offset_mesh": Vector3( 0, 0, 0 ),
+"optimize_mesh": true,
+"scale_mesh": Vector3( 1, 1, 1 )
+}
 
 [input]
 
@@ -114,11 +127,6 @@ roll_right={
 roll_left={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
- ]
-}
-free_rot={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 pause={

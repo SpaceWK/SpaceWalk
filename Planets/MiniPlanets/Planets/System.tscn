@@ -163,7 +163,7 @@ transform = Transform( 1.5, -1.68063e-07, 9.31323e-10, 1.00158e-07, 1.5, -8.7311
 transform = Transform( 1, -6.23713e-08, 3.49246e-10, -2.76668e-09, 1, 2.91038e-11, 0, 2.91038e-11, 1, 0.000941396, 0.000186987, 0.591034 )
 
 [node name="Planet" parent="Sun/Orbits/Orbit_6" instance=ExtResource( 5 )]
-transform = Transform( 0.678339, -1.07076e-07, 0.737245, 9.19224e-09, 0.999999, -5.59771e-09, -0.737245, -8.73115e-11, 0.678339, -17.1188, -3.28578, 29.2841 )
+transform = Transform( -0.857652, -1.07076e-07, -0.517788, -7.25688e-09, 0.999999, 7.9479e-09, 0.517788, -8.73115e-11, -0.857652, -17.1188, -3.28578, 29.2841 )
 rotate = true
 
 [node name="Meteors" parent="Sun/Orbits" instance=ExtResource( 7 )]
