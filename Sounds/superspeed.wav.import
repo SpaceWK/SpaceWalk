@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/superspeed.wav-f7bb0fa7247a964477fbaba2a0b8a08f.sample"
+
+[deps]
+
+source_file="res://Sounds/superspeed.wav"
+dest_files=[ "res://.import/superspeed.wav-f7bb0fa7247a964477fbaba2a0b8a08f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

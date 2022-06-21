@@ -65,13 +65,12 @@ func _physics_process(delta):
 	transform.basis = transform.basis.orthonormalized()
 	velocity = -transform.basis.z * forward_speed
 	move_and_collide(velocity * delta)
-	
+
 func set_in_space(value): 						#--------------------------------------------------------------------
 	in_space = value							#|this is a setget for in_space. When set, this will fire a signal. |
 	emit_signal("space_state_changed", value)	#--------------------------------------------------------------------
-	
+
 func triangulate_normal(pa : Vector3, pb : Vector3, pc : Vector3):#this function calculates the orientation of the ship relative to the landing points
 	var a = pb - pa
 	var b = pc - pa
 	var normal = a * b
-	

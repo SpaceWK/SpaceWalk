@@ -40,7 +40,6 @@ target = NodePath("../Luminaris0")
 
 [node name="Camera" type="Camera" parent="CameraNode"]
 transform = Transform( 1, 0, 0, 0, 0.970321, -0.24182, 0, 0.24182, 0.970321, 0, -0.264797, 1.00918 )
-fov = 68.7445
 
 [node name="Fighter" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.005, 0, -4.37114e-10, 0, 0.005, 0, 4.37114e-10, 0, -0.005, -0.000280276, 0.307048, 0.187362 )
