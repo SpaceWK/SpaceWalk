@@ -94,10 +94,6 @@ enabled=PoolStringArray( "res://addons/zylann.hterrain/plugin.cfg" )
 stre=false
 stretch=false
 
-[gui]
-
-theme/custom_font="res://Menu/Fonts/montreal/Montreal.tres"
-
 [importer_defaults]
 
 wavefront_obj={

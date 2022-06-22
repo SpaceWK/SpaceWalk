@@ -42,10 +42,11 @@ position = Vector2( 511.843, 303.065 )
 texture = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+anchor_bottom = 1.01725e-07
 margin_left = -35.9188
-margin_top = -67.3477
+margin_top = -68.8461
 margin_right = 1091.08
-margin_bottom = 643.652
+margin_bottom = 642.154
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
