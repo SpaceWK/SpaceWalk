@@ -1,6 +1,7 @@
 extends KinematicBody
 
 signal space_state_changed
+signal mining_started
 
 export var max_speed = 21
 export var back_speed = -21
@@ -17,6 +18,10 @@ var pitch_input = 0#							| are activated.                             |
 var roll_input = 0#								----------------------------------------------
 var yaw_input = 0
 var inventory = Inventory.new()
+var laser_scene = preload("res://Ships/laser/laser.tscn") #preloaded laser scene
+var can_mine : bool = false
+
+onready var laser = laser_scene.instance()
 
 onready var landing_points = $LandingPoints#	  -----------------------------------------------------------------
 onready var landing_detectors = $LandingDetectors#| Raycasts that try to detect the planet surface. LandingPoints |
@@ -25,9 +30,13 @@ onready var landing_detectors = $LandingDetectors#| Raycasts that try to detect 
 #												  | range to land on the planet.                                  |
 #												  -----------------------------------------------------------------
 func _ready():
+	get_tree().root.add_child(laser) #parenting to the root since directly parenting to the ship distorts the laser calculations
 	GlobalVars.ship_ref = self
 
 func get_input(delta):
+	if Input.is_action_pressed("fire_mining_laser") && can_mine:
+		emit_signal("mining_started")
+		laser.set_fire(true)
 	if Input.is_action_pressed("throttle_up"):
 		forward_speed = lerp(forward_speed, max_speed, acceleration * delta)
 		$AdvanceDashes.emitting = true
@@ -74,3 +83,6 @@ func triangulate_normal(pa : Vector3, pb : Vector3, pc : Vector3):#this function
 	var a = pb - pa
 	var b = pc - pa
 	var normal = a * b
+
+func _on_mining_interrupted():
+	laser.set_fire(false)      
