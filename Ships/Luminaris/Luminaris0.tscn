@@ -15,9 +15,7 @@ material = ExtResource( 4 )
 top_radius = 3.074
 height = 2.575
 
-[node name="Luminaris0" groups=[
-"ship",
-] instance=ExtResource( 1 )]
+[node name="Luminaris0" groups=["ship"] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 max_speed = 15
 back_speed = -15
