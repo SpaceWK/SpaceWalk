@@ -119,7 +119,7 @@ transform = Transform( 0.955594, -0.261695, 0.135483, 0.283153, 0.942763, -0.176
 transform = Transform( 0.345197, 0.320609, -1.10365, 0.625652, 0.914216, 0.461268, 0.964053, -0.708109, 0.0958297, 64.1177, 10.8375, 43.6316 )
 
 [node name="ExitArea" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 250, 64 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 163.804, 64 )
 script = ExtResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ExitArea"]
