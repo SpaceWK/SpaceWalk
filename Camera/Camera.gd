@@ -50,10 +50,13 @@ func _input(event):
 	if Input.is_action_pressed("pause"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		enabled = false
+		
+	# resetare mouse pe captured si sa pot folosi in continouare mouse ul
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		enabled = true
 		inverse()
+	
 	if event is InputEventMouseMotion && enabled:
 		rotation.y += event.relative.x / -sensitivity_x
 		rotation.x += event.relative.y / -sensitivity_y

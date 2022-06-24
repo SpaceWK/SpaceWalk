@@ -15,14 +15,13 @@ material = ExtResource( 4 )
 top_radius = 3.074
 height = 2.575
 
-[node name="Luminaris0" groups=[
-"ship",
-] instance=ExtResource( 1 )]
+[node name="Luminaris0" groups=["ship"] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 max_speed = 15
+back_speed = -15
 
 [node name="Luminaris OBJ" parent="." index="0"]
-transform = Transform( -0.005, 0, 4.37114e-10, 0, 0.005, 0, -4.37114e-10, 0, -0.005, 0, 0, 0 )
+transform = Transform( -0.005, 0, -7.54979e-10, 0, 0.005, 0, 7.54979e-10, 0, -0.005, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 shape = SubResource( 1 )
@@ -39,14 +38,12 @@ material/0 = null
 
 [node name="AdvanceDashes" parent="." index="4" instance=ExtResource( 3 )]
 transform = Transform( 0.00797603, 0, 0.999968, 0, 1, 0, -0.999968, 0, 0.00797603, 0, 0, 2.644 )
-emitting = false
 speed_scale = 2.0
 explosiveness = 0.14
 randomness = 0.33
 
 [node name="RegressDashes" parent="." index="5" instance=ExtResource( 3 )]
 transform = Transform( 8.74228e-08, -6.60025e-15, 1, -3.01992e-07, -1, -1.69407e-20, 2, -1.50996e-07, -4.37114e-08, 0, 0, -11.203 )
-emitting = false
 lifetime = 0.7
 speed_scale = 0.4
 explosiveness = 0.1
@@ -84,8 +81,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12 )
 enabled = true
 
 [node name="SpotLight" type="SpotLight" parent="." index="9"]
-transform = Transform( 1, 0, 0, 0, 0.0413002, 0.999147, 0, -0.999147, 0.0413002, 0, 0.537395, 0 )
-light_color = Color( 0.976471, 0.972549, 0.952941, 1 )
-light_energy = 8.49
-spot_range = 1.10976
-spot_angle = 48.4701
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.94441 )
+light_color = Color( 0.94902, 0.921569, 0.788235, 1 )
+light_energy = 9.26
+spot_range = 1.1
+spot_angle = 13.2169

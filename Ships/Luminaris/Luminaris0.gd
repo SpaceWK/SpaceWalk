@@ -4,11 +4,11 @@ signal space_state_changed
 signal mining_started
 
 export var max_speed = 21
-export var min_speed = -21
+export var back_speed = -21
 export var acceleration = 0.6
 export var pitch_speed = 1.5
 export var roll_speed = 1.9
-export var yaw_speed = 0.75  
+export var yaw_speed = 0.75  # Set lower for linked roll/yaw
 export var input_response = 8.0
 
 var in_space : bool setget set_in_space#<-----------------------------------------------------
@@ -43,7 +43,7 @@ func get_input(delta):
 	else:
 		$AdvanceDashes.emitting = false
 	if Input.is_action_pressed("throttle_down"):
-		forward_speed = lerp(forward_speed, min_speed, acceleration * delta)
+		forward_speed = lerp(forward_speed, back_speed, acceleration * delta)
 		$RegressDashes.emitting = true
 		$Fire1.visible = false
 		$Fire2.visible = false
@@ -51,8 +51,6 @@ func get_input(delta):
 		$RegressDashes.emitting = false
 		$Fire1.visible = true
 		$Fire2.visible = true
-	if forward_speed == 0:
-		$Fire1.visible = false
 
 	pitch_input = lerp(pitch_input,
 			Input.get_action_strength("pitch_up") - Input.get_action_strength("pitch_down"),
