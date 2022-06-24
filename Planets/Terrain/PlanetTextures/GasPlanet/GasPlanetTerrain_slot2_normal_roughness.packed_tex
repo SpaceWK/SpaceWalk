@@ -1,9 +1,0 @@
-{
-	"contains_albedo": false,
-	"resolution": 1024,
-	"src": {
-		"a": "res://Planets/Terrain/Textures/Rock29/Rock029_4K_Roughness.jpg",
-		"normalmap_flip_y": true,
-		"rgb": "res://Planets/Terrain/Textures/Rock29/Rock029_4K_NormalDX.jpg"
-	}
-}
