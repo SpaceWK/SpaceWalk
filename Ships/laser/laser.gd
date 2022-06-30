@@ -7,8 +7,6 @@ var firing = false
 
 onready var beam = $beam #beam mesh
 
-
-
 func _ready():
 	visible = false
 
@@ -26,5 +24,4 @@ func set_fire(can_fire): #shows / hides laser while mining
 	visible = can_fire
 	firing = can_fire
 	if can_fire == false:
-		beam.mesh.height = 1 #reset the beam to a smaller length
-	
+		beam.mesh.height = 1 #reset  the beam to a smaller length

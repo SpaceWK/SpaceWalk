@@ -276,6 +276,7 @@ script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="EntryField"]
 transform = Transform( -0.646282, 0, 0.763091, 0, 1, 0, -0.763091, 0, -0.646282, 0, -0.5, 0 )
+visible = false
 shape = SubResource( 35 )
 
 [node name="PlanetLoadingArea" type="Area" parent="."]
@@ -283,4 +284,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14843, 0, -0.317746 )
 
 [node name="CollisionShape" type="CollisionShape" parent="PlanetLoadingArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.221072, 0 )
+visible = false
 shape = SubResource( 36 )

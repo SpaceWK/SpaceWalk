@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://Sounds/Ambiental.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=2]
 [ext_resource path="res://Ships/Luminaris/Luminaris0.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Menu/Pause_Menu/Pause_Menu.tscn" type="PackedScene" id=4]
@@ -20,7 +21,7 @@ target = NodePath("../Luminaris0")
 transform = Transform( 1, 0, 0, 0, 0.970321, -0.24182, 0, 0.24182, 0.970321, 0, -0.264797, 1.00918 )
 
 [node name="Luminaris0" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 120.047 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9668, 0, -321.583 )
 
 [node name="System" parent="." instance=ExtResource( 7 )]
 transform = Transform( -1.97698, 0, 0.302557, 0, 2, 0, -0.302557, 0, -1.97698, -2.32632, -5.36728, 57.12 )
@@ -34,3 +35,6 @@ margin_bottom = 25.0
 [node name="GUI" parent="GUI" instance=ExtResource( 9 )]
 
 [node name="PauseMenu" parent="GUI" instance=ExtResource( 4 )]
+
+[node name="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5511, 149.979, -210.922 )

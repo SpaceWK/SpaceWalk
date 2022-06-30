@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "#ff888888",
+		"rgb": "res://Planets/Terrain/Textures/Aerial_dirt/dirt_aerial_02_diff_4k.jpg"
+	}
+}

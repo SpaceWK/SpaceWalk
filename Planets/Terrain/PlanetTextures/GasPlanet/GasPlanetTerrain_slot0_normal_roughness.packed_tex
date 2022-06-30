@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 512,
+	"src": {
+		"a": "res://Planets/Terrain/Textures/Aerial_dirt/dirt_aerial_02_rough_4k.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://Planets/Terrain/Textures/Aerial_dirt/dirt_aerial_02_nor_gl_4k.jpg"
+	}
+}
