@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "res://Test/Texture/Paving/PavingStones055_2K_Displacement.jpg",
+		"rgb": "res://Test/Texture/Paving/PavingStones055_2K_Color.jpg"
+	}
+}

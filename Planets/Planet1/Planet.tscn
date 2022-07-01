@@ -221,10 +221,9 @@ radius = 12.0
 radius = 5.72128
 
 [node name="Planet" type="Spatial"]
-transform = Transform( 0.986042, 0, -0.206177, 0, 1, 0, 0.206177, 0, 0.986042, 0, 0, 0 )
+transform = Transform( -1.00297, 0, -0.0940122, 0, 1, 0, 0.0940122, 0, -1.00297, 0, 0, 0 )
 script = ExtResource( 1 )
 planet_data = SubResource( 28 )
-rotate = false
 
 [node name="Up" type="MeshInstance" parent="."]
 material_override = ExtResource( 5 )
@@ -276,7 +275,6 @@ script = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="EntryField"]
 transform = Transform( -0.646282, 0, 0.763091, 0, 1, 0, -0.763091, 0, -0.646282, 0, -0.5, 0 )
-visible = false
 shape = SubResource( 35 )
 
 [node name="PlanetLoadingArea" type="Area" parent="."]
@@ -284,5 +282,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14843, 0, -0.317746 )
 
 [node name="CollisionShape" type="CollisionShape" parent="PlanetLoadingArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.221072, 0 )
-visible = false
 shape = SubResource( 36 )

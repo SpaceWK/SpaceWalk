@@ -1,0 +1,133 @@
+[gd_resource type="Resource" load_steps=31 format=2]
+
+[ext_resource path="res://Planets/Planet1/PlanetNoise.gd" type="Script" id=1]
+[ext_resource path="res://Planets/Planet1/PlanetBiome.gd" type="Script" id=2]
+[ext_resource path="res://Planets/Planet1/PlanetData.gd" type="Script" id=3]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+seed = 60
+octaves = 9
+period = 117.8
+persistence = 0.245
+lacunarity = 3.49
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.21645, 0.561328, 0.789474, 1 )
+colors = PoolColorArray( 0.178484, 0.734375, 0.0631104, 1, 0.174378, 0.648438, 0.0759888, 1, 0.37116, 0.824219, 0.0611725, 1, 0.914063, 0.632993, 0.096405, 1, 0.890625, 0.501833, 0.041748, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+gradient = SubResource( 3 )
+start_height = 0.5
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.133971, 0.515152, 0.936508, 1 )
+colors = PoolColorArray( 0.0606995, 0.914063, 0.0740333, 1, 0.180663, 0.60498, 0.0354481, 1, 0.384098, 0.71875, 0.0533447, 1, 0.621448, 0.878418, 0.120096, 1, 0.704051, 0.933105, 0.0801888, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 2 )
+gradient = SubResource( 6 )
+start_height = 2.0
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.0550239, 0.131579, 0.217703, 0.30622, 0.374384, 0.526316, 0.665025, 0.854067, 1 )
+colors = PoolColorArray( 0.820313, 0.571375, 0.0961304, 1, 0.949219, 0.630077, 0.0815735, 1, 0.742188, 0.429084, 0.0753784, 1, 0.402344, 0.214044, 0.0801544, 1, 0.425781, 0.185656, 0.0415802, 1, 0.496736, 0.097551, 0.0303968, 1, 0.4375, 0.11408, 0.0358887, 1, 0.424692, 0.120428, 0.0200694, 1, 0.40625, 0.156573, 0.0301514, 1, 0.340332, 0.147215, 0.00797653, 1 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 2 )
+gradient = SubResource( 9 )
+start_height = 0.3
+
+[sub_resource type="Gradient" id=11]
+offsets = PoolRealArray( 0.0261194, 0.25, 0.626866, 1 )
+colors = PoolColorArray( 0.116329, 0.9375, 0.109863, 1, 0.80127, 0.28316, 0.165888, 1, 0.980957, 0.890811, 0.114956, 1, 0.485321, 0.890625, 0.0800171, 1 )
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 2 )
+gradient = SubResource( 12 )
+start_height = 3.0
+
+[sub_resource type="Gradient" id=14]
+offsets = PoolRealArray( 0, 0.276119, 0.414179, 0.69403 )
+colors = PoolColorArray( 0.862122, 0.882813, 0.220703, 1, 0.976563, 0.776052, 0.0915527, 1, 0.95752, 0.506403, 0.0261822, 1, 0.902832, 0.21352, 0.0811138, 1 )
+
+[sub_resource type="GradientTexture" id=15]
+gradient = SubResource( 14 )
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 2 )
+gradient = SubResource( 15 )
+start_height = 1.0
+
+[sub_resource type="Gradient" id=17]
+offsets = PoolRealArray( 0, 0.649254, 1 )
+colors = PoolColorArray( 0.680176, 0.0770512, 0.234311, 1, 0.637207, 0.0622272, 0.319957, 1, 0.800781, 0.140762, 0.790468, 1 )
+
+[sub_resource type="GradientTexture" id=18]
+gradient = SubResource( 17 )
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 2 )
+gradient = SubResource( 18 )
+start_height = 1.93
+
+[sub_resource type="Gradient" id=20]
+offsets = PoolRealArray( 0, 0.291045, 0.593284, 1 )
+colors = PoolColorArray( 0.890747, 0.933594, 0.105759, 1, 0.146472, 0.871582, 0.102139, 1, 0.143417, 0.941406, 0.866595, 1, 0.182098, 0.597656, 0.597656, 1 )
+
+[sub_resource type="GradientTexture" id=21]
+gradient = SubResource( 20 )
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 2 )
+gradient = SubResource( 21 )
+start_height = 1.5
+
+[sub_resource type="Gradient" id=23]
+offsets = PoolRealArray( 0, 0.559702, 0.772388, 0.988806 )
+colors = PoolColorArray( 0.116837, 0.885343, 0.964844, 1, 0.115425, 0.789803, 0.820801, 1, 0.011673, 0.042982, 0.0664063, 1, 0.059082, 0.28064, 0.945313, 1 )
+
+[sub_resource type="GradientTexture" id=24]
+gradient = SubResource( 23 )
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 2 )
+gradient = SubResource( 24 )
+start_height = 2.5
+
+[sub_resource type="OpenSimplexNoise" id=26]
+period = 249.2
+persistence = 1.0
+lacunarity = 0.1
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 1 )
+noise_map = SubResource( 26 )
+amplitude = 0.857
+min_height = 0.313
+use_first_layer_as_mask = false
+
+[resource]
+script = ExtResource( 3 )
+radius = 5.0
+resolution = 30
+surface_data_path = "res://Planets/Terrain/GasPlanetTerrain.tscn"
+fog_color = Color( 0.905882, 0.552941, 0.709804, 1 )
+planet_noise = [ SubResource( 27 ) ]
+biomes = [ SubResource( 4 ), SubResource( 7 ), SubResource( 10 ), SubResource( 13 ), SubResource( 16 ), SubResource( 19 ), SubResource( 22 ), SubResource( 25 ) ]
+biome_noise = SubResource( 1 )
+biome_amplitude = -1.096
+biome_offset = 1.297
+biome_blend = 1.0

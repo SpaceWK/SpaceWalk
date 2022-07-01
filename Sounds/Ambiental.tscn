@@ -3,7 +3,7 @@
 [ext_resource path="res://Sounds/jet2.wav" type="AudioStream" id=1]
 [ext_resource path="res://Sounds/flying_in_atmosphere.wav" type="AudioStream" id=2]
 [ext_resource path="res://Sounds/deep_space.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Sounds/jet.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/jet1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sounds/Ambiental.gd" type="Script" id=5]
 
 [node name="Spatial" type="Spatial"]
@@ -11,17 +11,13 @@ script = ExtResource( 5 )
 
 [node name="DeepSpace" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-autoplay = true
 mix_target = 1
 
 [node name="Jet1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-autoplay = true
 
 [node name="Jet2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-autoplay = true
 
 [node name="Flying" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-autoplay = true

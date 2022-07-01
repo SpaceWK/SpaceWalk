@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 512,
+	"src": {
+		"a": "res://Test/Texture/Aerial_sand/aerial_sand_rough_4k.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://Test/Texture/Aerial_sand/aerial_sand_nor_gl_4k.jpg"
+	}
+}

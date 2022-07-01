@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "res://Test/Texture/Marble/Marble006_4K_Displacement.jpg",
+		"rgb": "res://Test/Texture/Marble/Marble006_4K_Color.jpg"
+	}
+}

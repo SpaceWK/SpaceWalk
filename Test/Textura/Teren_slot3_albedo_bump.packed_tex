@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "#ff888888",
+		"rgb": "res://Test/Texture/Snow_field/snow_field_aerial_col_4k.jpg"
+	}
+}

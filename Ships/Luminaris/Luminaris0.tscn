@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Ships/Luminaris/Luminaris0.glb" type="PackedScene" id=1]
 [ext_resource path="res://Ships/Luminaris/Luminaris0.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Ships/EngineFlame/engine_flame.material" type="Material" id=4]
 [ext_resource path="res://SkyBox/PlanetTransitionSkybox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ships/Luminaris/AnchoredRaycast.gd" type="Script" id=6]
+[ext_resource path="res://Sounds/superspeed_start.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sounds/superspeed_stop.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/jet2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/jet1.wav" type="AudioStream" id=10]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.136059, 0.0412311, 0.225056 )
@@ -44,12 +48,24 @@ speed_scale = 2.0
 explosiveness = 0.14
 randomness = 0.33
 
+[node name="SuperSpeed_start" type="AudioStreamPlayer3D" parent="AdvanceDashes" index="0"]
+stream = ExtResource( 7 )
+unit_db = 11.973
+unit_size = 14.6
+bus = "SFX"
+
 [node name="RegressDashes" parent="." index="5" instance=ExtResource( 3 )]
 transform = Transform( 8.74228e-08, -6.60025e-15, 1, -3.01992e-07, -1, -1.69407e-20, 2, -1.50996e-07, -4.37114e-08, 0, 0, -11.203 )
 lifetime = 0.7
 speed_scale = 0.4
 explosiveness = 0.1
 randomness = 0.08
+
+[node name="SuperSpeed_stop" type="AudioStreamPlayer3D" parent="RegressDashes" index="0"]
+stream = ExtResource( 8 )
+unit_db = 10.932
+unit_size = 25.5
+bus = "SFX"
 
 [node name="MeshInstance" parent="." index="6" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94854e-05, 1.49012e-08, -0.00360792 )
@@ -88,3 +104,12 @@ light_color = Color( 0.976471, 0.968627, 0.921569, 1 )
 light_energy = 11.61
 spot_range = 1.1
 spot_angle = 13.2169
+
+[node name="Jet1" type="AudioStreamPlayer3D" parent="." index="10"]
+stream = ExtResource( 10 )
+unit_db = 11.973
+unit_size = 18.0
+
+[node name="Jet2" type="AudioStreamPlayer3D" parent="." index="11"]
+stream = ExtResource( 9 )
+unit_db = -6.531

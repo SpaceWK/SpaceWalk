@@ -181,7 +181,9 @@ shader_params/u_bottom_ao = 0.351
 shader_params/u_instance_scale = Vector3( 1.5, 1.5, 1.5 )
 
 [node name="Boundary" type="StaticBody" parent="."]
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Boundary"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 50, 64 )
+visible = false
 shape = SubResource( 5 )
