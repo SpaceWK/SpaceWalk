@@ -6,6 +6,7 @@ var end : Vector3 = Vector3(1, 0, 0) #end of the beam in global coordinates
 var firing = false
 
 onready var beam = $beam #beam mesh
+onready var laser_sound = $Laser
 
 func _ready():
 	visible = false
@@ -19,9 +20,12 @@ func _process(delta):
 		beam.rotation_degrees.x += 90
 		beam.global_transform.origin = midpoint
 		beam.mesh.height = start.distance_to(end)
+		
 
 func set_fire(can_fire): #shows / hides laser while mining
+	laser_sound.playing = true
 	visible = can_fire
 	firing = can_fire
 	if can_fire == false:
 		beam.mesh.height = 1 #reset  the beam to a smaller length
+		laser_sound.playing = false

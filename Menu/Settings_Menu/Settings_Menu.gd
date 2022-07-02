@@ -30,6 +30,8 @@ func _ready():
 	brightnes.value = Save.game_data.brightness
 	
 	masterVol.value = Save.game_data.masterVol
+	musicVol.value = Save.game_data.musicVol
+	sfxVol.value = Save.game_data.sfx
 	
 	fov.value = Save.game_data.fov
 	mouseSens.value = Save.game_data.mouse_sens
@@ -64,12 +66,12 @@ func _on_MasterVolBtn_value_changed(value):
 	GlobalSettings.update_masterVol(value)
 
 
-#func _on_MusicVolBtn_value_changed(value):
-	#GlobalSettings.update_masterVol(1, value)
+func _on_MusicVolBtn_value_changed(value):
+	GlobalSettings.update_musicVol(value)
 
 
-#func _on_SfxValBtn_value_changed(value):
-	#pass # Replace with function body.
+func _on_SfxValBtn_value_changed(value):
+	GlobalSettings.update_sfxVol(value)
 
 
 func _on_FovBtn_value_changed(value):

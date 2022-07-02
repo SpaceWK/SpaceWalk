@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laser-sound-effect-1-11002.mp3-09aa6fd489b6d32c7331d71be6c75ae7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/laser-sound-effect-1-11002.mp3"
+dest_files=[ "res://.import/laser-sound-effect-1-11002.mp3-09aa6fd489b6d32c7331d71be6c75ae7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

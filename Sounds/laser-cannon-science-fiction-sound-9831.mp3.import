@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laser-cannon-science-fiction-sound-9831.mp3-58c98a7776bd1480c4b2c69d6b15ff38.mp3str"
+
+[deps]
+
+source_file="res://Sounds/laser-cannon-science-fiction-sound-9831.mp3"
+dest_files=[ "res://.import/laser-cannon-science-fiction-sound-9831.mp3-58c98a7776bd1480c4b2c69d6b15ff38.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

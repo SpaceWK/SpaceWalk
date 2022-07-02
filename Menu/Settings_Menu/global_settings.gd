@@ -40,6 +40,16 @@ func update_masterVol(vol):
 	AudioServer.set_bus_volume_db(0, vol)
 	Save.game_data.masterVol = vol
 	Save.save_data()
+	
+func update_musicVol(vol):
+	AudioServer.set_bus_volume_db(1, vol)
+	Save.game_data.musicVol = vol
+	Save.save_data()
+	
+func update_sfxVol(vol):
+	AudioServer.set_bus_volume_db(2, vol)
+	Save.game_data.sfx = vol
+	Save.save_data()
 
 func update_fov(value):
 	emit_signal("fov_signal", value)

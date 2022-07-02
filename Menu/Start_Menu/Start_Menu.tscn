@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://SkyBox/hdr.png" type="Texture" id=1]
 [ext_resource path="res://Planets/Planet1/Planet.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Menu/Settings_Menu/fps.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Menu/Settings_Menu/Settings_Menu.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Menu/Pause_Menu/default.theme" type="Theme" id=11]
+[ext_resource path="res://Sounds/482706__erokia__ambient-wave-45.wav" type="AudioStream" id=12]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 1 )
@@ -58,8 +59,7 @@ transform = Transform( -1, 0, -8.74228e-08, -2.99849e-08, 0.93934, 0.342988, 8.2
 environment = SubResource( 2 )
 
 [node name="Planet" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 2 )]
-transform = Transform( 0.0851479, 0, -1.01274, 0, 1, 0, 1.01274, 0, 0.0851479, -4.59311, -6.03648, 20.4151 )
-rotate = true
+transform = Transform( 0.360013, 0, -0.950542, 0, 1, 0, 0.950542, 0, 0.360013, -4.59311, -6.03648, 20.4151 )
 
 [node name="Luminaris0" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199999, -0.73157 )
@@ -69,6 +69,9 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 27.5597, -20.9801, 76.2113 
 
 [node name="Saturnus" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 7 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -31.2084, -8.86251, 36.5608 )
+
+[node name="Music" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource( 12 )
 
 [node name="Menu" type="Control" parent="."]
 anchor_right = 1.0

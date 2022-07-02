@@ -23,9 +23,11 @@ var can_mine : bool = false
 var was_superspeed := false
 var was_slowspeed := false
 var was_jet := false
+var was_laser := false
 
 onready var laser = laser_scene.instance()
 
+onready var laser_sound = $Laser
 onready var jet1 = $Jet1
 onready var jet2 = $Jet2
 onready var superspeed_start = $AdvanceDashes/SuperSpeed_start
@@ -45,10 +47,12 @@ func get_input(delta):
 	var superspeed = false
 	var slowspeed = false
 	var jet = true
+	var laser_s = false
 	
 	if Input.is_action_pressed("fire_mining_laser") && can_mine:
 		emit_signal("mining_started")
 		laser.set_fire(true)
+	
 	if Input.is_action_pressed("throttle_up"):
 		forward_speed = lerp(forward_speed, max_speed, acceleration * delta)
 		$AdvanceDashes.emitting = true
@@ -130,3 +134,6 @@ func play_start_superspeed():
 	
 func play_stop_superspeed():
 	superspeed_stop.play()
+	
+func play_laser():
+	laser_sound.play()

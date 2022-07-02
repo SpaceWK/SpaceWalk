@@ -36,5 +36,5 @@ margin_bottom = 25.0
 
 [node name="PauseMenu" parent="GUI" instance=ExtResource( 4 )]
 
-[node name="Spatial" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5511, 149.979, -210.922 )
+[node name="Ambiental" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.4243, 153.895, -211.225 )
