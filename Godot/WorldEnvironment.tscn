@@ -1,23 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Godot/WorldEnvironment.gd" type="Script" id=1]
-[ext_resource path="res://SkyBox/hdr.png" type="Texture" id=2]
-
-[sub_resource type="PanoramaSky" id=1]
-panorama = ExtResource( 2 )
-
-[sub_resource type="Environment" id=2]
-background_mode = 2
-background_sky = SubResource( 1 )
-background_color = Color( 0.25098, 0.0784314, 0.0784314, 1 )
-background_energy = 2.04
-ambient_light_energy = 1.89
-tonemap_mode = 2
-tonemap_exposure = 2.09
-tonemap_white = 5.0
-glow_bloom = 0.1
-adjustment_enabled = true
+[ext_resource path="res://Godot/SpaceEnvironment.tres" type="Environment" id=2]
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
-environment = SubResource( 2 )
+environment = ExtResource( 2 )
 script = ExtResource( 1 )

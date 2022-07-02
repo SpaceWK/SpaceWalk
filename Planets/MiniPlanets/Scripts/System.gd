@@ -1,6 +1,7 @@
 extends Spatial
 
 onready var orbits = $Sun/Orbits
+onready var world_environment = $WorldEnvironment
 
 var orbits_speed = []
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Planets/Planet1/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Planets/Planet1/PlanetMeshFace.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Planets/Planet1/PlanetMaterial.tres" type="Material" id=5]
 [ext_resource path="res://Planets/Planet1/PlanetBiome.gd" type="Script" id=6]
 [ext_resource path="res://Planets/EntryField.gd" type="Script" id=7]
+[ext_resource path="res://Planets/Terrain/GasPlanetSkybox.tres" type="Environment" id=8]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 60
@@ -129,6 +130,7 @@ radius = 5.0
 resolution = 30
 surface_data_path = "res://Planets/Terrain/GasPlanetTerrain.tscn"
 fog_color = Color( 0.905882, 0.552941, 0.709804, 1 )
+surface_environment = ExtResource( 8 )
 planet_noise = [ SubResource( 27 ) ]
 biomes = [ SubResource( 4 ), SubResource( 7 ), SubResource( 10 ), SubResource( 13 ), SubResource( 16 ), SubResource( 19 ), SubResource( 22 ), SubResource( 25 ) ]
 biome_noise = SubResource( 1 )

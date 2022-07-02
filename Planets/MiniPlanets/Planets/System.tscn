@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Planets/MiniPlanets/Planets/Earth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Planets/MiniPlanets/Planets/Sun.tscn" type="PackedScene" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://Planets/MiniPlanets/Planets/IceMars.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Planets/MiniPlanets/Planets/Saturnus.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Planets/MiniPlanets/Planets/IcyNeptune.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Godot/WorldEnvironment.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type spatial;
@@ -207,5 +206,3 @@ radius = 0.5
 radial_segments = 30
 rings = 20
 material = SubResource( 2 )
-
-[node name="WorldEnvironment" parent="." instance=ExtResource( 11 )]
