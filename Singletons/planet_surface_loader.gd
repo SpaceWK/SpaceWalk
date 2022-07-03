@@ -30,9 +30,11 @@ func _load_surface(var planet_data : PlanetData): #(private) loads the surface i
 
 func go_to_surface(data : PlanetData): #switches to the surface scene
 	if is_instance_valid(_loaded_resource):
-		GlobalVars.level_ref.queue_free()
+		GlobalVars.level_ref.visible = false
+		GlobalVars.level_ref.set_process(false)
 		GlobalVars.ship_ref.translation = Vector3(45, 120, 45)
 		get_tree().get_root().add_child(_loaded_resource)
+		GlobalVars.world_env.environment = data.surface_environment
 		GlobalVars.surface_ref = _loaded_resource
 		GlobalVars.planet_transition_skybox.transition( #see SkyBox/PlanetTransitionSkybox.gd
 		false,
@@ -44,9 +46,11 @@ func go_to_surface(data : PlanetData): #switches to the surface scene
 func leave_surface():
 	if is_instance_valid(GlobalVars.surface_ref):
 		GlobalVars.surface_ref.queue_free()
-		get_tree().get_root().add_child(GlobalVars.level_instance)
+		GlobalVars.world_env.environment = GlobalVars.default_env
+		GlobalVars.level_ref.visible = true
+		GlobalVars.level_ref.set_process(true)
 		GlobalVars.ship_ref.transform = GlobalVars.ship_last_system_position
-#		GlobalVars.ship_ref.rotate
+		GlobalVars.ship_ref.rotate(Vector3(0, 1, 0), PI/2)
 
 
 func unload():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot1_albedo_bump.packed_tex" type="Texture" id=1]
 [ext_resource path="res://Planets/Terrain/PlanetTextures/GasPlanet/GasPlanetTerrain_slot3_normal_roughness.packed_tex" type="Texture" id=2]
@@ -13,33 +13,7 @@
 [ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=11]
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=12]
 [ext_resource path="res://Planets/Terrain/GasPlanet/data.hterrain" type="Resource" id=13]
-
-[sub_resource type="ProceduralSky" id=1]
-sky_top_color = Color( 0.788235, 0.513726, 0.294118, 1 )
-sky_horizon_color = Color( 0.831373, 0.388235, 0.596078, 1 )
-sky_curve = 0.254559
-ground_bottom_color = Color( 0.741176, 0.654902, 0.513726, 1 )
-ground_horizon_color = Color( 0.0784314, 0.301961, 0.278431, 1 )
-sun_color = Color( 1, 0.839216, 0.54902, 1 )
-sun_latitude = 16.44
-
-[sub_resource type="Environment" id=2]
-background_mode = 2
-background_sky = SubResource( 1 )
-background_sky_custom_fov = 86.8
-background_sky_orientation = Basis( 0.735, 0, 0, 0, 1.026, 0, 0, 0, 1 )
-fog_enabled = true
-fog_color = Color( 0.780392, 0.745098, 0.6, 1 )
-fog_sun_color = Color( 1, 0.901961, 0.701961, 1 )
-fog_depth_begin = 0.0
-fog_depth_end = 115.4
-fog_depth_curve = 0.659756
-fog_transmit_enabled = true
-fog_height_enabled = true
-fog_height_min = 12.0
-fog_height_max = -5.0
-fog_height_curve = 0.901251
-tonemap_mode = 3
+[ext_resource path="res://Planets/Terrain/GasPlanetSkybox.tres" type="Environment" id=14]
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 11 )
@@ -67,7 +41,7 @@ extents = Vector3( 64, 1, 64 )
 transform = Transform( 1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 24.9968, 69.5637, 0.455207 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 2 )
+environment = ExtResource( 14 )
 
 [node name="HTerrain" type="Spatial" parent="."]
 script = ExtResource( 12 )
