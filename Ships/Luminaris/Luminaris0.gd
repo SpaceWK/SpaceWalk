@@ -27,7 +27,6 @@ var was_laser := false
 
 onready var laser = laser_scene.instance()
 
-onready var laser_sound = $Laser
 onready var jet1 = $Jet1
 onready var jet2 = $Jet2
 onready var superspeed_start = $AdvanceDashes/SuperSpeed_start
@@ -134,6 +133,3 @@ func play_start_superspeed():
 	
 func play_stop_superspeed():
 	superspeed_stop.play()
-	
-func play_laser():
-	laser_sound.play()

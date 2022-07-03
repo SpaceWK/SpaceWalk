@@ -59,7 +59,7 @@ transform = Transform( -1, 0, -8.74228e-08, -2.99849e-08, 0.93934, 0.342988, 8.2
 environment = SubResource( 2 )
 
 [node name="Planet" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 2 )]
-transform = Transform( 0.360013, 0, -0.950542, 0, 1, 0, 0.950542, 0, 0.360013, -4.59311, -6.03648, 20.4151 )
+transform = Transform( -0.555787, 0, 0.857605, 0, 1, 0, -0.857605, 0, -0.555787, -4.59311, -6.03648, 20.4151 )
 
 [node name="Luminaris0" parent="Background/ViewportContainer/Viewport" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199999, -0.73157 )
@@ -72,6 +72,7 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -31.2084, -8.86251, 36.5608 )
 
 [node name="Music" type="AudioStreamPlayer" parent="Background"]
 stream = ExtResource( 12 )
+bus = "Music"
 
 [node name="Menu" type="Control" parent="."]
 anchor_right = 1.0
