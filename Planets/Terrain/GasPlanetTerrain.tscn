@@ -15,24 +15,24 @@
 [ext_resource path="res://Planets/Terrain/GasPlanet/data.hterrain" type="Resource" id=13]
 [ext_resource path="res://Planets/Terrain/GasPlanetSkybox.tres" type="Environment" id=14]
 
-[sub_resource type="Resource" id=3]
+[sub_resource type="Resource" id=1]
 script = ExtResource( 11 )
 mode = 0
 textures = [ [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 5 ) ], [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ) ] ]
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 64, 300, 1 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 1, 300, 64 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 1, 300, 128 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 64, 300, 1 )
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 64, 1, 64 )
 
 [node name="Spatial" type="Spatial"]
@@ -53,7 +53,7 @@ collision_mask = 1
 shader_type = "Classic4"
 custom_shader = null
 custom_globalmap_shader = null
-texture_set = SubResource( 3 )
+texture_set = SubResource( 1 )
 shader_params/u_ground_uv_scale_per_texture = Plane( 20, 20, 20, 20 )
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = false
@@ -66,19 +66,19 @@ shader_params/u_colormap_opacity_per_texture = Plane( 1, 1, 1, 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Barrier"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 150, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Barrier"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 150, 64 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Barrier"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 150, 64 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Barrier"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 150, 128 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="ore" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.930072, 0.367378, 0, -0.367378, 0.930072, 0, 0, 0, 1, 78.7681, 7.77267, 67.8163 )
@@ -97,4 +97,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 250, 64 )
 script = ExtResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ExitArea"]
-shape = SubResource( 8 )
+shape = SubResource( 6 )

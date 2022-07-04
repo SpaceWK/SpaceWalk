@@ -15,7 +15,7 @@ func _process(delta):
 	beam.rotation = Vector3(0, 0, 0)
 	start = GlobalVars.ship_ref.global_transform.origin
 	if firing:
-		var midpoint : Vector3 = (start + end) / Vector3(2, 2, 2) #midpoint between the start and end, where the laser will be positioned.
+		var midpoint : Vector3 = (start + end) / Vector3(2, 2, 2) 
 		beam.look_at_from_position(start, midpoint, Vector3.UP)
 		beam.rotation_degrees.x += 90
 		beam.global_transform.origin = midpoint
